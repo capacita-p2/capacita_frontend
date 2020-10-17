@@ -11,7 +11,11 @@
         />
 
         <q-toolbar-title align="center">
-          <p>CAPACITA<br> Cursos Inclusivos</p>
+          <div  class="row items-center">
+            <div class="col">
+              <p style="margin: 0;"><span class="text-weight-bold">CAPACITA</span><br> <span style="font-size: 0.9em;">Cursos Inclusivos</span></p>
+            </div>
+          </div>
         </q-toolbar-title>
 
         <div><q-icon name="home" style="font-size: 5em;"/></div>
@@ -36,11 +40,64 @@
             </q-item-section>
           </q-item>
         </div>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+        <div class="row items-center">
+            <div class="col-4" style="padding-left: 2em;">
+                <a href="/">
+                  <img src="../imagens/btn_inicio.svg" alt="Botão de Inicial" style="width: 3em;">
+                </a>
+            </div>
+            <div class="col-8 texto-menu">
+              <a href="/">Início</a>
+            </div>
+            <div class="col-4" style="padding-left: 2em;">
+                <a href="#">
+                  <img src="../imagens/btn_sobre_nos.svg" alt="Botão Sobre Nós" style="width: 3em;">
+                </a>
+            </div>
+            <div class="col-8 texto-menu">
+              <a href="#">Sobre Nós</a>
+            </div>
+            <div class="col-4" style="padding-left: 2em;">
+                <a href="#">
+                  <img src="../imagens/btn_cursos.svg" alt="Botão de Cursos" style="width: 3em;">
+                </a>
+            </div>
+            <div class="col-8 texto-menu">
+              <a href="#">Cursos</a>
+            </div>
+            <div class="col-4" style="padding-left: 2em;">
+                <a href="#">
+                  <img src="../imagens/btn_noticias.svg" alt="Botão de Notícias" style="width: 3em;">
+                </a>
+            </div>
+            <div class="col-8 texto-menu">
+              <a href="#">Notícias</a>
+            </div>
+            <div class="col-4" style="padding-left: 2em;">
+                <a href="#">
+                  <img src="../imagens/btn_forum.svg" alt="Botão de Fórum" style="width: 3em;">
+                </a>
+            </div>
+            <div class="col-8 texto-menu">
+              <a href="#">Fórum</a>
+            </div>
+            <div class="col-4" style="padding-left: 2em;">
+                <a href="#">
+                  <img src="../imagens/btn_acesso.svg" alt="Botão de Acesso" style="width: 3em;">
+                </a>
+            </div>
+            <div class="col-8 texto-menu">
+              <a href="#">Acesso</a>
+            </div>
+            <div class="col-4" style="padding-left: 2em;">
+                <a href="#">
+                  <img src="../imagens/btn_contato.svg" alt="Botão de Contato" style="width: 3em;">
+                </a>
+            </div>
+            <div class="col-8 texto-menu">
+              <a href="#">Contato</a>
+            </div>
+        </div>
       </q-list>
     </q-drawer>
 
@@ -51,60 +108,13 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksData = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
 
 export default {
   name: 'MainLayout',
-  components: { EssentialLink },
+  components: {},
   data () {
     return {
-      leftDrawerOpen: false,
-      essentialLinks: linksData
+      leftDrawerOpen: false
     }
   }
 }
