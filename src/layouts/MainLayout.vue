@@ -40,63 +40,49 @@
             </q-item-section>
           </q-item>
         </div>
-        <div class="row items-center">
-            <div class="col-4" style="padding-left: 2em;">
-                <a href="/">
-                  <img src="../imagens/btn_inicio.svg" alt="Botão de Inicial" style="width: 3em;">
-                </a>
-            </div>
-            <div class="col-8 texto-menu">
-              <a href="/">Início</a>
-            </div>
-            <div class="col-4" style="padding-left: 2em;">
-                <a href="#">
-                  <img src="../imagens/btn_sobre_nos.svg" alt="Botão Sobre Nós" style="width: 3em;">
-                </a>
-            </div>
-            <div class="col-8 texto-menu">
-              <a href="#">Sobre Nós</a>
-            </div>
-            <div class="col-4" style="padding-left: 2em;">
-                <a href="#">
-                  <img src="../imagens/btn_cursos.svg" alt="Botão de Cursos" style="width: 3em;">
-                </a>
-            </div>
-            <div class="col-8 texto-menu">
-              <a href="#">Cursos</a>
-            </div>
-            <div class="col-4" style="padding-left: 2em;">
-                <a href="#">
-                  <img src="../imagens/btn_noticias.svg" alt="Botão de Notícias" style="width: 3em;">
-                </a>
-            </div>
-            <div class="col-8 texto-menu">
-              <a href="#">Notícias</a>
-            </div>
-            <div class="col-4" style="padding-left: 2em;">
-                <a href="#">
-                  <img src="../imagens/btn_forum.svg" alt="Botão de Fórum" style="width: 3em;">
-                </a>
-            </div>
-            <div class="col-8 texto-menu">
-              <a href="#">Fórum</a>
-            </div>
-            <div class="col-4" style="padding-left: 2em;">
-                <a href="#">
-                  <img src="../imagens/btn_acesso.svg" alt="Botão de Acesso" style="width: 3em;">
-                </a>
-            </div>
-            <div class="col-8 texto-menu">
-              <a href="#">Acesso</a>
-            </div>
-            <div class="col-4" style="padding-left: 2em;">
-                <a href="#">
-                  <img src="../imagens/btn_contato.svg" alt="Botão de Contato" style="width: 3em;">
-                </a>
-            </div>
-            <div class="col-8 texto-menu">
-              <a href="#">Contato</a>
-            </div>
+        <div class="row">
+          <div class="row col-12 texto-menu link-primario">
+              <a href="/">
+                <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_inicio.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
+                <span class="col-6 q-ml-md">Início </span>
+              </a>
+          </div>
+          <div class="row col-12 texto-menu link-primario">
+              <a href="/">
+                <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_sobre_nos.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
+                <span class="col-6 q-ml-md">Sobre Nós </span>
+              </a>
+          </div>
+          <div class="row col-12 texto-menu link-primario">
+              <a href="/">
+                <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_cursos.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
+                <span class="col-6 q-ml-md">Cursos </span>
+              </a>
+          </div>
+          <div class="row col-12 texto-menu link-primario">
+              <a href="/">
+                <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_noticias.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
+                <span class="col-6 q-ml-md">Notícias </span>
+              </a>
+          </div>
+          <div class="row col-12 texto-menu link-primario">
+              <a href="/">
+                <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_forum.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
+                <span class="col-6 q-ml-md">Fórum </span>
+              </a>
+          </div>
+          <div class="row col-12 texto-menu link-primario">
+              <a href="/">
+                <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_acesso.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
+                <span class="col-6 q-ml-md">Acesso </span>
+              </a>
+          </div>
+          <div class="row col-12 texto-menu link-primario">
+              <a href="/">
+                <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_contatos.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
+                <span class="col-6 q-ml-md">Contato </span>
+              </a>
+          </div>
         </div>
       </q-list>
     </q-drawer>
