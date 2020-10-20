@@ -94,6 +94,42 @@
           </div>
         </div>
       </div>
+      <!-- NOTÍCIAS -->
+      <div class="row">
+        <h3 class="col-12">Notícias</h3>
+        <!-- NOTICIA01 -->
+        <div class="col-4 col-md-4 col-xs-12 q-pb-lg">
+          <div class="noticia">
+            <div id="img_noticia01" class="img_noticia"></div>
+            <div class="noticia01">
+              <h5 class="q-ma-md">Lorem ipsum dolor sit amet, consectetur adip iscing elit. </h5>
+              <p class="text-justify q-pa-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum pharetra tellus, non venenatis metus porta id. Nunc vestibulum fringilla mattis. Nunc mi lorem, varius nec porta fringilla, pretium ut nibh. Nulla ultricies laoreet felis, non porta turpis. Fusce maximus elementum ligula, eget lacinia ex rhoncus ut. Proin id massa purus. In tristique ultrices magna, eget accumsan tortor congue id. Donec iaculis enim nunc, at ultricies urna porta id. Nunc fringilla nibh nec leo efficitur cursus. Ut id tellus vitae risus lacinia tincidunt. Maecenas ut dolor consectetur tortor iaculis egestas. Aenean eu tristique arcu.</p>
+              <div class="texto_noticia"></div>
+            </div>
+          </div>
+        </div>
+        <!-- NOTÍCIA02 -->
+        <div class="col-4 col-md-4 col-xs-12 q-pb-lg">
+          <div class="noticia">
+            <div id="img_noticia02" class="img_noticia"></div>
+            <div class="noticia02">
+              <h5 class="q-ma-md">Lorem ipsum dolor sit amet, consectetur adip iscing elit. </h5>
+              <p class="text-justify q-pa-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum pharetra tellus, non venenatis metus porta id. Nunc vestibulum fringilla mattis. Nunc mi lorem, varius nec porta fringilla, pretium ut nibh. Nulla ultricies laoreet felis, non porta turpis. Fusce maximus elementum ligula, eget lacinia ex rhoncus ut. Proin id massa purus. In tristique ultrices magna, eget accumsan tortor congue id. Donec iaculis enim nunc, at ultricies urna porta id. Nunc fringilla nibh nec leo efficitur cursus. Ut id tellus vitae risus lacinia tincidunt. Maecenas ut dolor consectetur tortor iaculis egestas. Aenean eu tristique arcu.</p>
+              <div class="texto_noticia"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 col-md-4 col-xs-12 q-pb-lg">
+          <div class="noticia">
+            <div id="img_noticia03" class="img_noticia"></div>
+            <div class="noticia03">
+              <h5 class="q-ma-md">Lorem ipsum dolor sit amet, consectetur adip iscing elit. </h5>
+              <p class="text-justify q-pa-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum pharetra tellus, non venenatis metus porta id. Nunc vestibulum fringilla mattis. Nunc mi lorem, varius nec porta fringilla, pretium ut nibh. Nulla ultricies laoreet felis, non porta turpis. Fusce maximus elementum ligula, eget lacinia ex rhoncus ut. Proin id massa purus. In tristique ultrices magna, eget accumsan tortor congue id. Donec iaculis enim nunc, at ultricies urna porta id. Nunc fringilla nibh nec leo efficitur cursus. Ut id tellus vitae risus lacinia tincidunt. Maecenas ut dolor consectetur tortor iaculis egestas. Aenean eu tristique arcu.</p>
+              <div class="texto_noticia"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </q-page>
 </template>
@@ -144,5 +180,24 @@ export default {
 }
 .card-multiplos {
   background-image: url("../imagens/cartao_multiplos.png");
+}
+//NOTICIAS
+div.noticia {
+  width:300px;
+  height:750px;
+}
+div.img_noticia {
+  height: 240px;
+  width: 300px;
+  border-radius: 20px;
+}
+div#img_noticia01 {
+  background-image: url("../imagens/noticia_01.jpg")
+}
+div#img_noticia02 {
+  background-image: url("../imagens/noticia_02.jpg")
+}
+div#img_noticia03 {
+  background-image: url("../imagens/noticia_03.jpg")
 }
 </style>
