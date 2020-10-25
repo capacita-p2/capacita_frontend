@@ -1,15 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          style="font-size: 1.5em; border-radius: 0.5em;"
-          dense
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
-
+      <q-toolbar class="relative-position">
         <q-toolbar-title align="center">
           <div  class="row items-center">
             <div class="col">
@@ -17,8 +9,21 @@
             </div>
           </div>
         </q-toolbar-title>
-
-        <div><q-icon name="home" style="font-size: 5em;"/></div>
+        <div class="absolute-left" style="width: 100%; height: 62px;">
+          <div class="float-left" style="padding: 7px 0 0 20px;">
+            <q-btn
+              style="font-size: 1.5em; border-radius: 0.5em;"
+              dense
+              icon="menu"
+              aria-label="Menu"
+              @click="leftDrawerOpen = !leftDrawerOpen"
+            />
+          </div>
+          <div>
+            <div class="float-right" style="height: 62px; padding: 0 10px 0 0;"><q-icon name="home" style="font-size: 4.5em;"/></div>
+            <div class="float-right gt-xs" style="height: 62px; padding: 17px 15px 0 0;"><q-btn style="font-size: 0.8em;" rounded color="orange" label="Acesso" /></div>
+          </div>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -72,7 +77,7 @@
               </a>
           </div>
           <div class="row col-12 texto-menu link-primario">
-              <a href="/">
+              <a href="/acesso">
                 <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_acesso.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
                 <span class="col-6 q-ml-md">Acesso </span>
               </a>
