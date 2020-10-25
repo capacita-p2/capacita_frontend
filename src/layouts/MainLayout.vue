@@ -2,6 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar class="relative-position" style="height: 62px;">
+        <!-- BARRA DE TÍTULO -->
         <q-toolbar-title align="center">
           <div  class="row items-center">
             <div class="col">
@@ -9,6 +10,7 @@
             </div>
           </div>
         </q-toolbar-title>
+        <!-- BOTÃO DE MENU -->
         <div class="absolute-left" style="width: 100%; height: 62px;">
           <div class="float-left" style="padding: 7px 0 0 20px;">
             <q-btn
@@ -19,14 +21,15 @@
               @click="leftDrawerOpen = !leftDrawerOpen"
             />
           </div>
+          <!-- ICONE E BOTÃO DE ACESSO -->
           <div>
             <div class="float-right" style="height: 62px; padding: 0 10px 0 0;"><q-icon name="home" style="font-size: 4.5em;"/></div>
-            <div class="float-right gt-xs" style="height: 62px; padding: 17px 15px 0 0;"><q-btn style="font-size: 0.8em;" rounded color="orange" label="Acesso" /></div>
+            <div class="float-right gt-xs" style="height: 62px; padding: 17px 15px 0 0;"><q-btn style="font-size: 0.8em;" rounded color="orange" label="Acesso" @click="icon = true"/></div>
           </div>
         </div>
       </q-toolbar>
     </q-header>
-
+    <!-- MENU LATERAL -->
     <q-drawer
       v-model="leftDrawerOpen"
       overlay
@@ -91,6 +94,16 @@
         </div>
       </q-list>
     </q-drawer>
+    <!-- MODAL DE CADASTRO PcD-->
+    <q-dialog v-model="icon">
+      <q-card>
+        <q-card-section class="row items-center q-pb-none">
+          <q-space />
+          <q-btn icon="close" flat round dense v-close-popup />
+        </q-card-section>
+       <CadastroPcD/>
+      </q-card>
+    </q-dialog>
 
     <q-page-container>
       <router-view />
@@ -100,12 +113,16 @@
 
 <script>
 
+import CadastroPcD from 'components/CadastroPcD'
 export default {
   name: 'MainLayout',
-  components: {},
+  components: {
+    CadastroPcD
+  },
   data () {
     return {
-      leftDrawerOpen: false
+      leftDrawerOpen: false,
+      icon: false
     }
   }
 }
