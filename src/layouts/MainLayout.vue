@@ -1,11 +1,11 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar class="relative-position">
+      <q-toolbar class="relative-position" style="height: 62px;">
         <q-toolbar-title align="center">
           <div  class="row items-center">
             <div class="col">
-              <p style="margin: 0;"><span class="text-weight-bold">CAPACITA</span><br> <span style="font-size: 0.9em;">Cursos Inclusivos</span></p>
+              <p style="margin: 0; line-height: 1em;"><span class="text-weight-bold" style="letter-spacing: 0.4em;">CAPACITA</span><br><span style="font-size: 0.8em;">Cursos Inclusivos </span></p>
             </div>
           </div>
         </q-toolbar-title>
