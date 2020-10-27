@@ -101,7 +101,7 @@
           <q-space />
           <q-btn icon="close" flat round dense v-close-popup />
         </q-card-section>
-       <CadastroPcD/>
+       <CadastroPcD @closeModal="icon = false"/>
       </q-card>
     </q-dialog>
 

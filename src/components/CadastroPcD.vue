@@ -90,7 +90,7 @@
       <q-toggle v-model="accept" label="Eu aceito os termos da licença" />
 
       <div>
-        <q-btn label="Cadastrar" type="submit" color="primary"/>
+        <q-btn label="Cadastrar" type="submit" color="primary" @click="$emit('closeModal')"/>
         <q-btn label="Cancelar" type="reset" color="primary" flat class="q-ml-sm" />
       </div>
 
@@ -100,7 +100,7 @@
 
 <script>
 export default {
-  // name: 'ComponentName',
+  name: 'CadastroPdD',
   data () {
     return {
       nome: null,
@@ -154,11 +154,13 @@ export default {
         })
       }
     },
-
     onReset () {
       this.nome = null
       this.idade = null
       this.accept = false
+    },
+    fechar () {
+      this.$emit('v-close-popup')
     }
   }
 }
