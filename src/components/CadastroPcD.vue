@@ -7,25 +7,14 @@
     >
     <h6 class="text-azul_escuro">Cadastro Usuário PcD</h6>
       <q-input
-        v-model="nome"
+        v-model="usuarioPcd.nome"
         label="Nome"
         :rules="[ val => val && val.length > 0 || 'Por favor, digite seu nome completo.']"
       />
 
       <q-input
         type="text"
-        v-model="idade"
-        label="Idade"
-        mask="##/##/####"
-        fill-mask
-        :rules="[
-          val => val !== null && val !== '' || 'Por favor, digite sua idade.',
-        ]"
-      />
-
-      <q-input
-        type="text"
-        v-model="cpf"
+        v-model="usuarioPcd.cpf"
         label="CPF"
         mask="##.####.###-##"
         fill-mask
@@ -37,7 +26,7 @@
 
       <q-input
         type="text"
-        v-model="telefone"
+        v-model="usuarioPcd.telefone"
         label="Telefone"
         mask="(##) #####-####"
         fill-mask
@@ -48,8 +37,55 @@
       />
 
       <q-input
+        v-model="usuarioPcd.endereco"
+        label="Endereço"
+        :rules="[ val => val && val.length > 0 || 'Por favor, digite seu endereço.']"
+      />
+
+      <q-input
+        type="number"
+        v-model="usuarioPcd.numero"
+        label="Número"
+        lazy-rules
+        :rules="[
+          val => val !== null && val !== '' || 'Por favor, digite o número do seu endereço',
+          val => val > 0 || 'Por favor, digite um número válido'
+        ]"
+      />
+
+      <q-input
+        v-model="usuarioPcd.bairro"
+        label="Bairro"
+        :rules="[ val => val && val.length > 0 || 'Por favor, digite o nome do seu bairro.']"
+      />
+
+      <q-input
+        v-model="usuarioPcd.cidade"
+        label="Cidade"
+        :rules="[ val => val && val.length > 0 || 'Por favor, digite o nome da sua cidade.']"
+      />
+
+      <q-input
+        v-model="usuarioPcd.estado"
+        label="Estado"
+        :rules="[ val => val && val.length > 0 || 'Por favor, escolha seu estado.']"
+      />
+
+      <q-input
+        type="text"
+        v-model="usuarioPcd.cep"
+        label="CEP"
+        mask="##.###-###"
+        fill-mask
+        lazy-rules
+        :rules="[
+          val => val !== null && val !== '' || 'Por favor, digite seu CEP.',
+        ]"
+      />
+
+      <q-input
         type="email"
-        v-model="email"
+        v-model="usuarioPcd.email"
         label="E-mail"
         lazy-rules
         :rules="[
@@ -59,7 +95,7 @@
 
       <q-input
         type="password"
-        v-model="senha1"
+        v-model="usuarioPcd.senha1"
         label="Senha"
         lazy-rules
         :rules="[
@@ -69,7 +105,7 @@
 
       <q-input
         type="password"
-        v-model="senha2"
+        v-model="usuarioPcd.senha2"
         label="Repetir senha"
         lazy-rules
         :rules="[
@@ -79,8 +115,8 @@
 
       <div class="flex justify-center">
         <q-option-group style="width: 300px;"
-          v-model="group"
-          :options="options"
+          v-model="usuarioPcd.group"
+          :options="usuarioPcd.options"
           color="primary"
           type="checkbox"
           inline
@@ -103,37 +139,51 @@ export default {
   name: 'CadastroPdD',
   data () {
     return {
-      nome: null,
-      idade: null,
-      cpf: null,
-      telefone: null,
-      email: null,
-      senha1: null,
-      senha2: null,
       accept: false,
-      group: [],
-      options: [
-        {
-          label: 'Auditivo',
-          value: 'op1'
-        },
-        {
-          label: 'Físico',
-          value: 'op2'
-        },
-        {
-          label: 'Mudez',
-          value: 'op3'
-        },
-        {
-          label: 'Mental',
-          value: 'op4'
-        },
-        {
-          label: 'Visual',
-          value: 'op5'
-        }
-      ]
+      usuario: {
+        id: null,
+        email: null,
+        senha1: null,
+        senha2: null,
+        tipo: 0,
+        ativo: true
+      },
+      usuarioPcd: {
+        id: null,
+        nome: null,
+        telefone: null,
+        endereco: null,
+        numero: null,
+        bairro: null,
+        cidade: null,
+        estado: null,
+        cep: null,
+        cpf: null,
+        ativo: true,
+        group: [],
+        options: [
+          {
+            label: 'Auditivo',
+            value: 'op1'
+          },
+          {
+            label: 'Físico',
+            value: 'op2'
+          },
+          {
+            label: 'Mudez',
+            value: 'op3'
+          },
+          {
+            label: 'Mental',
+            value: 'op4'
+          },
+          {
+            label: 'Visual',
+            value: 'op5'
+          }
+        ]
+      }
     }
   },
   methods: {
@@ -159,8 +209,12 @@ export default {
       this.idade = null
       this.accept = false
     },
-    fechar () {
-      this.$emit('v-close-popup')
+    salvarUsuario () {
+      this.axios.post('http://localhost:3000/usuario', this.usuario).then(
+        response => {
+          console.log(console.data)
+        }
+      )
     }
   }
 }
