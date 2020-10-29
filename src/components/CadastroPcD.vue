@@ -95,7 +95,7 @@
 
       <q-input
         type="password"
-        v-model="usuarioPcd.senha1"
+        v-model="usuarioPcd.senha"
         label="Senha"
         lazy-rules
         :rules="[
@@ -126,7 +126,7 @@
       <q-toggle v-model="accept" label="Eu aceito os termos da licença" />
 
       <div>
-        <q-btn label="Cadastrar" type="submit" color="primary" @click="$emit('closeModal')"/>
+        <q-btn label="Cadastrar" type="submit" color="primary"/>
         <q-btn label="Cancelar" type="reset" color="primary" flat class="q-ml-sm" />
       </div>
 
@@ -140,16 +140,12 @@ export default {
   data () {
     return {
       accept: false,
-      usuario: {
-        id: null,
+      usuarioPcd: {
         email: null,
-        senha1: null,
+        senha: null,
         senha2: null,
         tipo: 0,
-        ativo: true
-      },
-      usuarioPcd: {
-        id: null,
+        ativo: true,
         nome: null,
         telefone: null,
         endereco: null,
@@ -159,7 +155,6 @@ export default {
         estado: null,
         cep: null,
         cpf: null,
-        ativo: true,
         group: [],
         options: [
           {
@@ -193,28 +188,52 @@ export default {
           color: 'red-5',
           textColor: 'white',
           icon: 'warning',
-          message: 'You need to accept the license and terms first'
+          message: 'Vocẽ precisa aceitar os termos de licença primeiro'
         })
       } else {
-        this.$q.notify({
-          color: 'green-4',
-          textColor: 'white',
-          icon: 'cloud_done',
-          message: 'Submitted'
-        })
+        if (this.usuarioPcd.senha !== this.usuarioPcd.senha2) {
+          this.$q.notify({
+            color: 'red-5',
+            textColor: 'white',
+            icon: 'vpn_key',
+            message: 'AS SENHAS NÃO CONFEREM, TENTE DIGITAR NOVAMENTE!'
+          })
+        } else {
+          this.$q.notify({
+            color: 'green-4',
+            textColor: 'white',
+            icon: 'cloud_done',
+            message: 'Enviado'
+          })
+          this.salvarUsuario()
+        }
       }
     },
     onReset () {
-      this.nome = null
+      this.usuarioPcd.email = null
+      this.usuarioPcd.senha = null
+      this.usuarioPcd.senha2 = null
+      this.usuarioPcd.nome = null
+      this.usuarioPcd.telefone = null
+      this.usuarioPcd.endereco = null
+      this.usuarioPcd.numero = null
+      this.usuarioPcd.bairro = null
+      this.usuarioPcd.cidade = null
+      this.usuarioPcd.estado = null
+      this.usuarioPcd.cep = null
+      this.usuarioPcd.cpf = null
       this.idade = null
       this.accept = false
     },
     salvarUsuario () {
-      this.axios.post('http://localhost:3000/usuario', this.usuario).then(
+      this.$axios.post('http://localhost:3000/usuariopcd', this.usuarioPcd).then(
         response => {
           console.log(console.data)
         }
       )
+      console.log(this.usuarioPcd)
+      // IMPORTAR MÉTODO 'closeModal' DO COMPONENT PAI
+      // this.$emit('closeModal')
     }
   }
 }
