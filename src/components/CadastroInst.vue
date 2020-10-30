@@ -144,7 +144,7 @@ export default {
         cidade: null,
         estado: null,
         cep: null,
-        cpf: null,
+        cnpj: null,
         group: [],
         options: [
           {
@@ -200,19 +200,18 @@ export default {
       }
     },
     onReset () {
-      this.usuarioPcd.email = null
-      this.usuarioPcd.senha = null
-      this.usuarioPcd.senha2 = null
-      this.usuarioPcd.nome = null
-      this.usuarioPcd.telefone = null
-      this.usuarioPcd.endereco = null
-      this.usuarioPcd.numero = null
-      this.usuarioPcd.bairro = null
-      this.usuarioPcd.cidade = null
-      this.usuarioPcd.estado = null
-      this.usuarioPcd.cep = null
-      this.usuarioPcd.cpf = null
-      this.idade = null
+      this.instituicao.email = null
+      this.instituicao.senha = null
+      this.instituicao.senha2 = null
+      this.instituicao.nome = null
+      this.instituicao.telefone = null
+      this.instituicao.endereco = null
+      this.instituicao.numero = null
+      this.instituicao.bairro = null
+      this.instituicao.cidade = null
+      this.instituicao.estado = null
+      this.instituicao.cep = null
+      this.instituicao.cnpj = null
       this.accept = false
     },
     salvarInstituicao () {
@@ -223,7 +222,7 @@ export default {
       )
       console.log(this.usuarioPcd)
       // IMPORTAR MÉTODO 'closeModal' DO COMPONENT PAI
-      // this.$emit('closeModal')
+      this.$emit('closeModal')
     }
   }
 }
