@@ -195,7 +195,7 @@ export default {
             icon: 'cloud_done',
             message: 'Enviado'
           })
-          this.salvarUsuario()
+          this.salvarInstituicao()
         }
       }
     },
@@ -215,7 +215,7 @@ export default {
       this.idade = null
       this.accept = false
     },
-    salvarUsuario () {
+    salvarInstituicao () {
       this.$axios.post('http://localhost:3000/instituicao', this.instituicao).then(
         response => {
           console.log(console.data)
