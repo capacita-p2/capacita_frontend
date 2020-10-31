@@ -101,7 +101,7 @@
           <q-space />
           <q-btn icon="close" flat round dense v-close-popup />
         </q-card-section>
-       <CadastroInst @closeModal="icon = false"/>
+       <Login @closeModal="icon = false"/>
       </q-card>
     </q-dialog>
 
@@ -113,11 +113,11 @@
 
 <script>
 
-import CadastroInst from 'components/CadastroInst'
+import Login from 'components/Login'
 export default {
   name: 'MainLayout',
   components: {
-    CadastroInst
+    Login
   },
   data () {
     return {

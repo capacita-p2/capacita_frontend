@@ -1,17 +1,17 @@
 <template>
   <q-page>
     <div>
-      <CadastroInst/>
+      <Login/>
     </div>
   </q-page>
 </template>
 
 <script>
-import CadastroInst from 'components/CadastroInst'
+import Login from 'components/Login'
 export default {
   name: 'Acesso',
   components: {
-    CadastroInst
+    Login
   }
 }
 </script>
