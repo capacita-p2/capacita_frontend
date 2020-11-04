@@ -65,10 +65,11 @@
         :rules="[ val => val && val.length > 0 || 'Por favor, digite o nome da sua cidade.']"
       />
 
-      <q-input
-        v-model="usuarioPcd.estado"
+      <q-select
+        v-model="estadoSelecionado"
+        :options="estados"
         label="Estado"
-        :rules="[ val => val && val.length > 0 || 'Por favor, escolha seu estado.']"
+        v-on:focus.native="selecionarEstado()"
       />
 
       <q-input
@@ -123,10 +124,10 @@
         />
       </div>
 
-      <q-toggle v-model="accept" label="Eu aceito os termos da licença" />
+      <q-toggle v-model="accept" label="Eu aceito os termos da licença"/>
 
       <div>
-        <q-btn label="Cadastrar" type="submit" color="primary"/>
+        <q-btn label="Cadastrar" type="submit" color="primary" />
         <q-btn label="Cancelar" type="reset" color="primary" flat class="q-ml-sm" />
       </div>
 
@@ -137,9 +138,18 @@
 <script>
 export default {
   name: 'CadastroPdD',
+  mounted () {
+    this.$axios.get('http://localhost:3000/estados').then(
+      response => {
+        this.estados = response.data
+      }
+    )
+  },
   data () {
     return {
       accept: false,
+      estados: null,
+      estadoSelecionado: null,
       usuarioPcd: {
         email: null,
         senha: null,
@@ -152,7 +162,7 @@ export default {
         numero: null,
         bairro: null,
         cidade: null,
-        estado: null,
+        id_estado: null,
         cep: null,
         cpf: null,
         group: [],
@@ -183,6 +193,7 @@ export default {
   },
   methods: {
     onSubmit () {
+      this.selecionarEstado()
       if (this.accept !== true) {
         this.$q.notify({
           color: 'red-5',
@@ -210,6 +221,7 @@ export default {
       }
     },
     onReset () {
+      this.estadoSelecionado = null
       this.usuarioPcd.email = null
       this.usuarioPcd.senha = null
       this.usuarioPcd.senha2 = null
@@ -219,13 +231,17 @@ export default {
       this.usuarioPcd.numero = null
       this.usuarioPcd.bairro = null
       this.usuarioPcd.cidade = null
-      this.usuarioPcd.estado = null
+      this.usuarioPcd.id_estado = null
       this.usuarioPcd.cep = null
       this.usuarioPcd.cpf = null
       this.idade = null
       this.accept = false
     },
+    selecionarEstado () {
+      this.usuarioPcd.id_estado = this.estadoSelecionado.id
+    },
     salvarUsuario () {
+      this.selecionarEstado()
       this.$axios.post('http://localhost:3000/usuariopcd', this.usuarioPcd).then(
         response => {
           console.log(console.data)
