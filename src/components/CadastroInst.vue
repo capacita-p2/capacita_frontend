@@ -65,10 +65,11 @@
         :rules="[ val => val && val.length > 0 || 'Por favor, digite o nome da sua cidade.']"
       />
 
-      <q-input
-        v-model="instituicao.estado"
+      <q-select
+        v-model="estadoSelecionado"
+        :options="estados"
         label="Estado"
-        :rules="[ val => val && val.length > 0 || 'Por favor, escolha seu estado.']"
+        v-on:focus.native="selecionarEstado()"
       />
 
       <q-input
@@ -127,9 +128,18 @@
 <script>
 export default {
   name: 'CadastroInst',
+  mounted () {
+    this.$axios.get('http://localhost:3000/estados').then(
+      response => {
+        this.estados = response.data
+      }
+    )
+  },
   data () {
     return {
       accept: false,
+      estados: null,
+      estadoSelecionado: null,
       instituicao: {
         email: null,
         senha: null,
@@ -142,7 +152,7 @@ export default {
         numero: null,
         bairro: null,
         cidade: null,
-        estado: null,
+        id_estado: null,
         cep: null,
         cnpj: null,
         group: [],
@@ -173,6 +183,7 @@ export default {
   },
   methods: {
     onSubmit () {
+      this.selecionarEstado()
       if (this.accept !== true) {
         this.$q.notify({
           color: 'red-5',
@@ -209,18 +220,22 @@ export default {
       this.instituicao.numero = null
       this.instituicao.bairro = null
       this.instituicao.cidade = null
-      this.instituicao.estado = null
+      this.instituicao.id_estado = null
       this.instituicao.cep = null
       this.instituicao.cnpj = null
       this.accept = false
     },
+    selecionarEstado () {
+      this.instituicao.id_estado = this.estadoSelecionado.id
+    },
     salvarInstituicao () {
+      this.selecionarEstado()
       this.$axios.post('http://localhost:3000/instituicao', this.instituicao).then(
         response => {
           console.log(console.data)
         }
       )
-      console.log(this.usuarioPcd)
+      console.log(this.instituicao)
       // IMPORTAR MÉTODO 'closeModal' DO COMPONENT PAI
       this.$emit('closeModal')
     }
