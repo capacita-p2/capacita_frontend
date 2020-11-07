@@ -69,6 +69,7 @@
         v-model="estadoSelecionado"
         :options="estados"
         label="Estado"
+        :rules="[ val => val || 'Por favor, selecione seu estado.']"
         v-on:focus.native="selecionarEstado()"
       />
 
@@ -204,9 +205,11 @@ export default {
             color: 'green-4',
             textColor: 'white',
             icon: 'cloud_done',
-            message: 'Enviado'
+            message: 'Enviado',
+            timeout: 10500
           })
           this.salvarInstituicao()
+          window.location = '/'
         }
       }
     },
