@@ -118,7 +118,7 @@
       <div class="flex justify-center">
         <q-option-group style="width: 300px;"
           v-model="usuarioPcd.group"
-          :options="usuarioPcd.options"
+          :options="options"
           color="primary"
           type="checkbox"
           inline
@@ -151,6 +151,28 @@ export default {
       accept: false,
       estados: null,
       estadoSelecionado: null,
+      options: [
+        {
+          label: 'Auditivo',
+          value: 1
+        },
+        {
+          label: 'Físico',
+          value: 2
+        },
+        {
+          label: 'Intelectual',
+          value: 3
+        },
+        {
+          label: 'Mudez',
+          value: 4
+        },
+        {
+          label: 'Visual',
+          value: 5
+        }
+      ],
       usuarioPcd: {
         email: null,
         senha: null,
@@ -166,29 +188,7 @@ export default {
         id_estado: null,
         cep: null,
         cpf: null,
-        group: [],
-        options: [
-          {
-            label: 'Auditivo',
-            value: 'op1'
-          },
-          {
-            label: 'Físico',
-            value: 'op2'
-          },
-          {
-            label: 'Mudez',
-            value: 'op3'
-          },
-          {
-            label: 'Mental',
-            value: 'op4'
-          },
-          {
-            label: 'Visual',
-            value: 'op5'
-          }
-        ]
+        group: []
       }
     }
   },
@@ -237,6 +237,7 @@ export default {
       this.usuarioPcd.id_estado = null
       this.usuarioPcd.cep = null
       this.usuarioPcd.cpf = null
+      this.group = null
       this.idade = null
       this.accept = false
     },
@@ -252,7 +253,7 @@ export default {
       )
       console.log(this.usuarioPcd)
       // IMPORTAR MÉTODO 'closeModal' DO COMPONENT PAI
-      // this.$emit('closeModal')
+      this.$emit('closeModal')
     }
   }
 }

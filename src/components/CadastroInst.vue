@@ -145,7 +145,7 @@ export default {
         email: null,
         senha: null,
         senha2: null,
-        tipo: 0,
+        tipo: 1,
         ativo: true,
         nome: null,
         telefone: null,
