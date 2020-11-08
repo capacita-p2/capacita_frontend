@@ -46,6 +46,7 @@ export default {
             icon: 'cloud_done',
             message: 'Usuário Pcd: ' + response.data.usuarioPcd.nome + ' CONNECTADO!'
           })
+          window.location = '/'
           this.$emit('closeModal')
         } else if (response.data.instituicao != null) {
           console.log('Instituicao')
@@ -55,6 +56,7 @@ export default {
             icon: 'cloud_done',
             message: 'Instituicão: ' + response.data.instituicao.nome + ' CONNECTADA!'
           })
+          window.location = '/'
           this.$emit('closeModal')
         } else if (response.data.admin != null) {
           console.log('Admin')
@@ -65,6 +67,7 @@ export default {
             message: 'Administrador Conectado.'
           })
           this.$emit('closeModal')
+          window.location = '/'
         } else {
           console.log(response.data.message)
           this.$q.notify({
