@@ -219,7 +219,6 @@ export default {
             timeout: 10500
           })
           this.salvarUsuario()
-          window.location = '/'
         }
       }
     },
@@ -246,11 +245,11 @@ export default {
     },
     salvarUsuario () {
       this.selecionarEstado()
-      this.$axios.post('http://localhost:3000/usuarioDeficienciaCreate', this.usuadioPcd.deficiencia).then(
-        response => {
-          console.log(console.data)
-        }
-      )
+      // this.$axios.post('http://localhost:3000/usuarioDeficienciaCreate', this.usuadioPcd.deficiencia).then(
+      //   response => {
+      //     console.log(console.data)
+      //   }
+      // )
       this.$axios.post('http://localhost:3000/usuariopcd', this.usuarioPcd).then(
         response => {
           console.log(console.data)
@@ -259,6 +258,7 @@ export default {
       console.log(this.usuarioPcd)
       // IMPORTAR MÉTODO 'closeModal' DO COMPONENT PAI
       this.$emit('closeModal')
+      window.location = '/'
     }
   }
 }
