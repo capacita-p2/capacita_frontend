@@ -117,7 +117,7 @@
 
       <div class="flex justify-center">
         <q-option-group style="width: 300px;"
-          v-model="usuarioPcd.deficiencia"
+          v-model="usuarioPcd.deficiencias"
           :options="options"
           color="primary"
           type="checkbox"
@@ -188,7 +188,7 @@ export default {
         id_estado: null,
         cep: null,
         cpf: null,
-        deficiencia: []
+        deficiencias: []
       }
     }
   },
@@ -245,11 +245,6 @@ export default {
     },
     salvarUsuario () {
       this.selecionarEstado()
-      // this.$axios.post('http://localhost:3000/usuarioDeficienciaCreate', this.usuadioPcd.deficiencia).then(
-      //   response => {
-      //     console.log(console.data)
-      //   }
-      // )
       this.$axios.post('http://localhost:3000/usuariopcd', this.usuarioPcd).then(
         response => {
           console.log(console.data)
