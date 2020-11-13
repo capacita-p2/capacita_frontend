@@ -53,7 +53,7 @@
           </a>
         </div>
         <div class="col-3" align="center">
-          <a href="#" class="link-primario text-azul_escuro">
+          <a href="/cursos" class="link-primario text-azul_escuro">
             <img src="../imagens/btn_cursos.svg" alt="Botão de Inicial" style="width: 3em;  width: 4em;"><br>
             <span>Cursos</span>
           </a>
