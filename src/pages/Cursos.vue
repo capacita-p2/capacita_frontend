@@ -5,26 +5,41 @@
       <h5 class="text-center text-weight-bold q-ma-none q-mb-lg text-azul_escuro">Cursos em Destaque</h5>
       <p class="text-center " style="font-size: 1.5em;">Nossa missão é trazer para você os melhores cursos profissionalizantes. Através de uma rede de instituições de ensino, sua Capacitação estará garantida para o mercado de trabalho. </p>
 
-      <div style="width: 100%;" class="flex justify-center">
-        <div style="max-width: 920px">
-          <q-tabs
-          v-model="tab"
-          inline-label
-          class="bg-primary text-white shadow-2"
-        >
-          <q-tab name="cursos" icon="menu_book" label="Cursos" />
-          <q-tab name="instituições" icon="apartment" label="Instituições" />
-          <q-tab name="noticias" icon="comment" label="Notícias" />
-          </q-tabs>
+      <div class="q-pa-md flex justify-center">
+        <div class="q-gutter-y-md" style="max-width: 950px;">
+          <q-card>
+            <q-tabs
+              v-model="tab"
+              inline-label
+              class="bg-primary text-white shadow-2"
+            >
+              <q-tab name="cursos" icon="menu_book" label="Cursos" />
+              <q-tab name="instituicoes" icon="apartment" label="Instituições" />
+              <q-tab name="noticias" icon="comment" label="Notícias" />
+            </q-tabs>
 
-          <div class="flex justify-center q-py-md">
-            <div v-for="curso in cursos" :key="curso.id">
-              <CardCurso :curso="curso"/>
-            </div>
-          </div>
+            <q-separator />
+
+            <q-tab-panels v-model="tab" animated>
+              <q-tab-panel name="cursos" class="flex justify-center">
+                <div v-for="curso in cursos" :key="curso.id">
+                  <CardCurso :curso="curso"/>
+                </div>
+              </q-tab-panel>
+
+              <q-tab-panel name="instituicoes">
+                <div class="text-h6">Instituições</div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </q-tab-panel>
+
+              <q-tab-panel name="noticias">
+                <div class="Notícias">Movies</div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </q-tab-panel>
+            </q-tab-panels>
+          </q-card>
         </div>
       </div>
-
     </div>
   </q-page>
 </template>
