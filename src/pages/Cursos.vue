@@ -15,7 +15,6 @@
             >
               <q-tab name="cursos" icon="menu_book" label="Cursos" />
               <q-tab name="instituicoes" icon="apartment" label="Instituições" />
-              <q-tab name="noticias" icon="comment" label="Notícias" />
             </q-tabs>
 
             <q-separator />
@@ -31,11 +30,6 @@
                 <div class="text-h6">Instituições</div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </q-tab-panel>
-
-              <q-tab-panel name="noticias">
-                <div class="Notícias">Movies</div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </q-tab-panel>
             </q-tab-panels>
           </q-card>
         </div>
@@ -48,78 +42,20 @@
 import CardCurso from 'components/CardCurso'
 export default {
   name: 'PaginaCursos',
+  mounted () {
+    this.$axios.get('http://localhost:3000/curso').then(response => {
+      this.cursos = response.data
+    })
+  },
   data () {
     return {
       tab: 'cursos',
-      cursos: [
-        {
-          id: 1,
-          titulo: 'Informática',
-          cargaHoraria: '40h',
-          deficiencias: 'Visual, Auditivo, Físico',
-          descricao: 'Curso de Informática básica: Word, Excel, PowerPoint, Access e Internet'
-        },
-        {
-          id: 2,
-          titulo: 'Informática',
-          cargaHoraria: '40h',
-          deficiencias: 'Visual, Auditivo, Físico',
-          descricao: 'Curso de Informática básica: Word, Excel, PowerPoint, Access e Internet'
-        },
-        {
-          id: 3,
-          titulo: 'Informática',
-          cargaHoraria: '40h',
-          deficiencias: 'Visual, Auditivo, Físico',
-          descricao: 'Curso de Informática básica: Word, Excel, PowerPoint, Access e Internet'
-        },
-        {
-          id: 4,
-          titulo: 'Informática',
-          cargaHoraria: '40h',
-          deficiencias: 'Visual, Auditivo, Físico',
-          descricao: 'Curso de Informática básica: Word, Excel, PowerPoint, Access e Internet'
-        },
-        {
-          id: 5,
-          titulo: 'Informática',
-          cargaHoraria: '40h',
-          deficiencias: 'Visual, Auditivo, Físico',
-          descricao: 'Curso de Informática básica: Word, Excel, PowerPoint, Access e Internet'
-        },
-        {
-          id: 6,
-          titulo: 'Informática',
-          cargaHoraria: '40h',
-          deficiencias: 'Visual, Auditivo, Físico',
-          descricao: 'Curso de Informática básica: Word, Excel, PowerPoint, Access e Internet'
-        },
-        {
-          id: 7,
-          titulo: 'Informática',
-          cargaHoraria: '40h',
-          deficiencias: 'Visual, Auditivo, Físico',
-          descricao: 'Curso de Informática básica: Word, Excel, PowerPoint, Access e Internet'
-        },
-        {
-          id: 8,
-          titulo: 'Informática',
-          cargaHoraria: '40h',
-          deficiencias: 'Visual, Auditivo, Físico',
-          descricao: 'Curso de Informática básica: Word, Excel, PowerPoint, Access e Internet'
-        },
-        {
-          id: 9,
-          titulo: 'Informática',
-          cargaHoraria: '40h',
-          deficiencias: 'Visual, Auditivo, Físico',
-          descricao: 'Curso de Informática básica: Word, Excel, PowerPoint, Access e Internet'
-        }
-      ]
+      cursos: null
     }
   },
   components: {
     CardCurso
-  }
+  },
+  methods: {}
 }
 </script>
