@@ -20,7 +20,7 @@
 
       <q-card-section class="q-pt-none">
         <div class="text-subtitle2">
-          Deficiência: {{ curso.deficiencia }}
+          Deficiência: {{ curso.Tipo_deficiencium.nome }}
         </div>
         <div class="text-body2 text-grey">
           <p>{{ curso.resumo }}</p>
@@ -54,7 +54,9 @@ export default {
       carga_horaria: String,
       deficiencia: String,
       resumo: String,
-      url_img: String
+      url_img: String,
+      Instituicao: Object,
+      Tipo_deficiencium: Object
     }
   }
 }
