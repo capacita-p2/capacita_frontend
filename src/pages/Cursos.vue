@@ -13,8 +13,8 @@
               inline-label
               class="bg-primary text-white shadow-2"
             >
-              <q-tab name="cursos" icon="menu_book" label="Cursos" />
-              <q-tab name="instituicoes" icon="apartment" label="Instituições" />
+              <q-tab name="cursos" icon="menu_book" label="Cursos" style="width: 100%"/>
+              <q-tab name="instituicoes" icon="apartment" label="Instituições"  style="width: 100%"/>
             </q-tabs>
 
             <q-separator />
