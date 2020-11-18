@@ -26,9 +26,10 @@
                 </div>
               </q-tab-panel>
 
-              <q-tab-panel name="instituicoes">
-                <div class="text-h6">Instituições</div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <q-tab-panel name="instituicoes" class="flex justify-center">
+                 <div v-for="curso in cursos" :key="curso.id">
+                  <CardInst :curso="curso"/>
+                </div>
               </q-tab-panel>
             </q-tab-panels>
           </q-card>
@@ -40,6 +41,7 @@
 
 <script>
 import CardCurso from 'components/CardCurso'
+import CardInst from 'components/CardInst'
 export default {
   name: 'PaginaCursos',
   mounted () {
@@ -54,7 +56,8 @@ export default {
     }
   },
   components: {
-    CardCurso
+    CardCurso,
+    CardInst
   },
   methods: {}
 }
