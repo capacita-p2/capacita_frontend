@@ -1,7 +1,7 @@
 <template>
   <div>
     <q-card class="my-card shadow-6 q-ma-sm">
-      <q-img :src="curso.url_img"/>
+      <q-img :src="url"/>
 
       <q-card-section>
 
@@ -45,7 +45,8 @@ export default {
   name: 'CardCurso',
   data () {
     return {
-      stars: 4
+      stars: 4,
+      url: 'http://localhost:3000/imagens/' + this.curso.url_img
     }
   },
   props: {

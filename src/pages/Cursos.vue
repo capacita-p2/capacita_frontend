@@ -27,8 +27,8 @@
               </q-tab-panel>
 
               <q-tab-panel name="instituicoes" class="flex justify-center">
-                 <div v-for="curso in cursos" :key="curso.id">
-                  <CardInst :curso="curso"/>
+                 <div v-for="instituicao in instituicoes" :key="instituicao.id">
+                  <CardInst :instituicao="instituicao"/>
                 </div>
               </q-tab-panel>
             </q-tab-panels>
@@ -48,11 +48,15 @@ export default {
     this.$axios.get('http://localhost:3000/curso').then(response => {
       this.cursos = response.data
     })
+    this.$axios.get('http://localhost:3000/instituicao').then(response => {
+      this.instituicoes = response.data
+    })
   },
   data () {
     return {
       tab: 'cursos',
-      cursos: null
+      cursos: null,
+      instituicoes: null
     }
   },
   components: {
