@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- INICIO CARD INSTITUIÇÃO -->
     <q-card class="my-card shadow-6 q-ma-sm">
       <q-img :src="url"/>
 
@@ -30,40 +31,53 @@
       </div>
     </q-card>
 
-    <!-- DETALHES DOS CURSOS -->
+    <!-- DETALHES DA INSTITUIÇÃO -->
     <q-dialog v-model="icon">
       <q-card>
         <q-card-section class="row items-center q-pb-none">
-          <div class="text-h6">Close icon</div>
           <q-space />
           <q-btn icon="close" flat round dense v-close-popup />
         </q-card-section>
 
-        <q-card-section>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam, ea at omnis vel numquam exercitationem aut, natus minima, porro labore.
+        <q-card-section class="q-py-none">
+          <div class="text-h5 text-center text-weight-bold">{{ instituicao.nome_instituicao }}</div>
+          <div  class='q-py-md'><q-img :src="url"/></div>
+          <p class="q-ma-none text-body1 text-justify">{{ instituicao.descricao }}</p><br>
+          <p>Alguns Cursos:</p>
+        </q-card-section>
+
+        <q-card-section class="row justify-center items-center q-pb-lg q-gutter-sm">
+          <div v-for="curso in instituicao.Cursos" :key="curso.id">
+            <MiniCardCurso :curso='curso' />
+          </div>
         </q-card-section>
       </q-card>
     </q-dialog>
-
   </div>
 </template>
 
 <script>
+import MiniCardCurso from 'components/MiniCardCurso'
 export default {
   name: 'CardInstituicao',
   data () {
     return {
       stars: 4,
       icon: false,
-      url: 'http://localhost:3000/imagens/' + this.instituicao.url_img
+      url: 'http://localhost:3000/imagens/' + this.instituicao.url_img,
+      icon2: false
     }
   },
   props: {
     instituicao: {
       nome_instituicao: String,
       descricao: String,
-      url_img: String
+      url_img: String,
+      Cursos: Object
     }
+  },
+  components: {
+    MiniCardCurso
   }
 }
 </script>

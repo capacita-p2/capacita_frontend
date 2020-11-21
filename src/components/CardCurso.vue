@@ -1,7 +1,8 @@
 <template>
   <div>
+    <!-- INICIO CARD CURSOS -->
     <q-card class="my-card shadow-6 q-ma-sm">
-      <q-img :src="url" class="rounded-borders" />
+      <q-img transition="scale" :src="url" class="rounded-borders" />
 
       <q-card-section>
 
