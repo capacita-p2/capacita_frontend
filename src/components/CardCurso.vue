@@ -1,7 +1,7 @@
 <template>
   <div>
     <q-card class="my-card shadow-6 q-ma-sm">
-      <q-img :src="url"/>
+      <q-img :src="url" class="rounded-borders" />
 
       <q-card-section>
 
@@ -32,10 +32,35 @@
 
         <q-card-actions class="flex justify-end">
           <q-btn flat color="primary" icon="add_circle" padding="xs">
-            <div class="q-pa-xs">Informações</div>
+            <div class="q-pa-xs" @click='icon=true'>Informações</div>
           </q-btn>
         </q-card-actions>
       </div>
+
+      <!-- DETALHES DOS CURSOS -->
+      <q-dialog v-model="icon">
+        <q-card>
+          <q-card-section class="row items-center q-pb-none">
+            <q-space />
+            <q-btn icon="close" flat round dense v-close-popup />
+          </q-card-section>
+
+          <q-card-section class="q-py-none">
+            <div class="text-h5 text-center text-weight-bold">{{ curso.nome_curso }}</div>
+            <div  class='q-py-md'><q-img :src="url"/></div>
+            <p class="q-ma-none text-body1 text-justify">{{ curso.descricao }}</p><br>
+            <p class="q-ma-none q-pb-md text-body1 text-weight-medium">Deficiência: <span class="text-italic">{{ curso.Tipo_deficiencium.nome }}</span></p>
+          </q-card-section>
+
+          <q-card-section class="row items-center q-pb-lg">
+            <a href="#" class="saiba-mais">Saiba mais sobre a instituição</a>
+            <q-space/>
+            <q-btn flat round color="grey" icon="star" class="q-mr-sm" />
+            <q-btn style="font-size: 0.8em;" rounded color="orange" label="Inscrever-se"/>
+          </q-card-section>
+        </q-card>
+      </q-dialog>
+
     </q-card>
   </div>
 </template>
@@ -46,6 +71,7 @@ export default {
   data () {
     return {
       stars: 4,
+      icon: false,
       url: 'http://localhost:3000/imagens/' + this.curso.url_img
     }
   },
@@ -55,6 +81,7 @@ export default {
       carga_horaria: String,
       deficiencia: String,
       resumo: String,
+      descricao: String,
       url_img: String,
       Instituicao: Object,
       Tipo_deficiencium: Object
@@ -68,4 +95,16 @@ export default {
   width: 290px;
   height: 407px;
 }
+
+.saiba-mais {
+  font-weight: 500;
+  font-size: 1.2em;
+  color: black;
+  text-decoration: none;
+}
+
+.saiba-mais:hover {
+  font-weight: 900;
+}
+
 </style>
