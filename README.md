@@ -1,10 +1,11 @@
 # Capacita Cursos Inclusivos (capacita)
 
-Front-end do Capacita Cursos Inclusivos
+FrontEnd do Projeto CAPACITA em desenvolvimento pela Equipe 27 GrowTech. 
+Alunos da FICR - Faculdade Católica Imaculada Conceição do Recife. 2020
 
 ## Install the dependencies
 ```bash
-yarn
+npm install
 ```
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
