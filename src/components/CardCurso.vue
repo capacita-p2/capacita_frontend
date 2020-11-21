@@ -49,7 +49,8 @@
             <div class="text-h5 text-center text-weight-bold">{{ curso.nome_curso }}</div>
             <div  class='q-py-md'><q-img :src="url"/></div>
             <p class="q-ma-none text-body1 text-justify">{{ curso.descricao }}</p><br>
-            <p class="q-ma-none q-pb-md text-body1 text-weight-medium">Deficiência: <span class="text-italic">{{ curso.Tipo_deficiencium.nome }}</span></p>
+            <p class="q-ma-none q-pa-none text-body1 text-weight-medium">Deficiência: <span class="text-italic">{{ curso.Tipo_deficiencium.nome }}</span></p>
+            <p class="q-ma-none q-pa-none text-body1 text-weight-medium">Custo: <span class="text-weight-bolder">{{ curso.valor }}</span></p>
           </q-card-section>
 
           <q-card-section class="row items-center q-pb-lg">
@@ -82,6 +83,7 @@ export default {
       deficiencia: String,
       resumo: String,
       descricao: String,
+      valor: String,
       url_img: String,
       Instituicao: Object,
       Tipo_deficiencium: Object
