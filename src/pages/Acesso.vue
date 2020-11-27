@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div>
-      <Login/>
+      <Login @closeModal="sair()" />
     </div>
   </q-page>
 </template>
@@ -12,6 +12,11 @@ export default {
   name: 'Acesso',
   components: {
     Login
+  },
+  methods: {
+    sair () {
+      window.location = '/'
+    }
   }
 }
 </script>
