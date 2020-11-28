@@ -58,8 +58,46 @@
             <a href="#" class="saiba-mais">Saiba mais sobre a instituição</a>
             <q-space/>
             <q-btn flat round color="grey" icon="star" class="q-mr-sm" />
-            <q-btn style="font-size: 0.8em;" rounded color="orange" label="Inscrever-se"/>
+            <q-btn style="font-size: 0.8em;" rounded color="orange" label="Inscrever-se" @click="confirm = true"/>
           </q-card-section>
+        </q-card>
+      </q-dialog>
+
+      <!-- DIALOG CONFIRMAÇÃO -->
+      <q-dialog v-model="confirm" persistent>
+        <q-card>
+          <q-card-section class="text-center flex-center">
+            <q-avatar icon="school" color="primary" text-color="white" /><br><br>
+            <span class="q-ml-sm">
+              Você deseja se inscriver em:<br><br>
+              Curso: {{ curso.nome_curso }}<br>
+              Instituição: {{ curso.Instituicao.nome }}<br>
+              Valor: <span class="text-weight-bolder">{{ curso.valor}}</span>
+
+            </span>
+          </q-card-section>
+
+          <q-card-actions align="center">
+            <q-btn flat label="Cancelar" color="primary" v-close-popup />
+            <q-btn flat label="Confirmar Inscrição" color="primary" class="text-weight-bold" v-close-popup @click="alert=true"/>
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
+
+      <!-- CONCLUSÃO INSCRIÇÃO -->
+      <q-dialog v-model="alert">
+        <q-card class="text-center">
+          <q-card-section>
+            <q-avatar icon="thumb_up" color="secondary" text-color="white" /><br><br>
+          </q-card-section>
+
+          <q-card-section class="q-pt-none">
+            Sua inscrição foi concluida com êxito!
+          </q-card-section>
+
+          <q-card-actions align="center">
+            <q-btn label="OK" color="white" text-color="secondary" @click="icon=false" v-close-popup />
+          </q-card-actions>
         </q-card>
       </q-dialog>
 
@@ -73,7 +111,9 @@ export default {
   data () {
     return {
       stars: 4,
+      alert: false,
       icon: false,
+      confirm: false,
       url: 'http://localhost:3000/imagens/' + this.curso.url_img
     }
   },
