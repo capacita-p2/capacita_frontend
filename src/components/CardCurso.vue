@@ -79,7 +79,7 @@
 
           <q-card-actions align="center">
             <q-btn flat label="Cancelar" color="primary" v-close-popup />
-            <q-btn flat label="Confirmar Inscrição" color="primary" class="text-weight-bold" v-close-popup @click="alert=true"/>
+            <q-btn flat label="Confirmar Inscrição" color="primary" class="text-weight-bold" v-close-popup @click="inscrever()"/>
           </q-card-actions>
         </q-card>
       </q-dialog>
@@ -88,24 +88,37 @@
       <q-dialog v-model="alert">
         <q-card class="text-center">
           <q-card-section>
-            <q-avatar icon="thumb_up" color="secondary" text-color="white" /><br><br>
+            <q-avatar :icon="alertMensage.icon" :color="alertMensage.cor" text-color="white" /><br><br>
           </q-card-section>
 
           <q-card-section class="q-pt-none">
-            Sua inscrição foi concluida com êxito!
+            {{ alertMensage.mensagem }}
           </q-card-section>
 
           <q-card-actions align="center">
-            <q-btn label="OK" color="white" text-color="secondary" @click="icon=false" v-close-popup />
+            <q-btn label="OK" color="white" text-color="black" v-close-popup />
           </q-card-actions>
         </q-card>
       </q-dialog>
 
     </q-card>
+
+    <!-- MODAL DE CADASTRO PcD-->
+    <q-dialog v-model="login">
+      <q-card>
+        <q-card-section class="row items-center q-pb-none">
+          <q-space />
+          <q-btn icon="close" flat round dense v-close-popup />
+        </q-card-section>
+      <Login @closeModal="login = false"/>
+      </q-card>
+    </q-dialog>
+
   </div>
 </template>
 
 <script>
+import Login from 'components/Login'
 export default {
   name: 'CardCurso',
   data () {
@@ -114,11 +127,21 @@ export default {
       alert: false,
       icon: false,
       confirm: false,
+      login: false,
+      alertMensage: {
+        icon: null,
+        cor: null,
+        mensagem: null
+      },
       url: 'http://localhost:3000/imagens/' + this.curso.url_img
     }
   },
+  components: {
+    Login
+  },
   props: {
     curso: {
+      id: String,
       nome_curso: String,
       carga_horaria: String,
       deficiencia: String,
@@ -128,6 +151,71 @@ export default {
       url_img: String,
       Instituicao: Object,
       Tipo_deficiencium: Object
+    }
+  },
+  methods: {
+    inscrever () {
+      const id = localStorage.getItem('idUsuario')
+      let response = null
+
+      const buscar = () => {
+        const usuario = this.$axios.post('http://localhost:3000/usuario-busca', { id })
+        return usuario
+      }
+      const logar = () => {
+        this.login = true
+      }
+      const verificarLogin = () => {
+        if (response.data.Usuario == null) {
+          return false
+        } else {
+          return true
+        }
+      }
+      const inscricao = async () => {
+        const inscricao = {
+          id_usuario_pcd: response.data.Usuario.Usuario_pcd.id,
+          id_curso: this.curso.id
+        }
+        await this.$axios.post('http://localhost:3000/verificar_inscricao', inscricao).then(async response => {
+          // SE INSCRIÇÃO NÃO EXISTIR, ENTÃO INSCREVER!
+          if (response.data.liberado === true) {
+            this.$axios.post('http://localhost:3000/inscricao', inscricao).then(responseInscricao => {
+              console.log(response.data)
+              console.log(responseInscricao.data)
+              this.alertMensage.icon = 'thumb_up'
+              this.alertMensage.mensagem = responseInscricao.data.message
+              this.alertMensage.cor = 'secondary'
+              this.alert = true
+              this.icon = false
+            }).catch(err => {
+              console.log(err)
+            })
+          } else {
+            console.log(response.data)
+            this.alertMensage.icon = 'report_problem'
+            this.alertMensage.mensagem = response.data.message
+            this.alertMensage.cor = 'warning'
+            this.alert = true
+            this.icon = false
+          }
+        })
+      }
+
+      // EXECUTAR CADEIRA DE AÇÕES
+      const execute = async () => {
+        response = await buscar()
+        if (verificarLogin()) {
+          inscricao()
+        } else {
+          if (verificarLogin()) {
+            inscricao()
+          } else {
+            logar()
+          }
+        }
+      }
+      execute()
     }
   }
 }

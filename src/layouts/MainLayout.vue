@@ -94,6 +94,7 @@
         </div>
       </q-list>
     </q-drawer>
+
     <!-- MODAL DE CADASTRO PcD-->
     <q-dialog v-model="icon">
       <q-card>

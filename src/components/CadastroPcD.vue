@@ -16,7 +16,7 @@
         type="text"
         v-model="usuarioPcd.cpf"
         label="CPF"
-        mask="##.####.###-##"
+        mask="###.###.###-##"
         fill-mask
         lazy-rules
         :rules="[
