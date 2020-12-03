@@ -8,7 +8,7 @@ const routes = [
       { path: 'acesso', component: () => import('pages/Acesso.vue') },
       { path: 'inscricaopcd', component: () => import('pages/InscricaoPcd.vue') },
       { path: 'inscricaoinst', component: () => import('pages/InscricaoInst.vue') },
-      { path: 'cursos', component: () => import('pages/Cursos.vue') }
+      { path: 'cursos', component: () => import('pages/Cursos.vue') },
       { path: 'sobrenos', component: () => import('pages/SobreNos.vue') }
     ]
   },

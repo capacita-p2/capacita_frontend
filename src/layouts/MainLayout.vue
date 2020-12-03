@@ -56,7 +56,7 @@
               </a>
           </div>
           <div class="row col-12 texto-menu link-primario">
-              <a href="/">
+              <a href="/sobrenos">
                 <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_sobre_nos.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
                 <span class="col-6 q-ml-md">Sobre Nós </span>
               </a>

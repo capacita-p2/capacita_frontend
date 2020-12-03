@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
     <div>
-      <img src="imagens/banner_1.png">
+      <img src="../imagens/banner_1.png">
       <h4 class="text-center text-weight-bolder color-primary q-ma-lg text-azul_escuro">Sobre Nós</h4>
       <h5 class="text-center text-weight-bold q-ma-none q-mb-lg text-azul_escuro">CAPACITA - Cursos Inclusivos</h5>
       <p class="text-center " style="font-size: 1.5em;">Nossa missão é trazer para você os melhores cursos profissionalizantes. Através de uma rede de instituições de ensino, sua Capacitação estará garantida para o mercado de trabalho.
@@ -13,4 +13,3 @@
     </div>
   </q-page>
 </template>
-
