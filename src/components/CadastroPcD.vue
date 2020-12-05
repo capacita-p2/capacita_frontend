@@ -211,13 +211,13 @@ export default {
             message: 'AS SENHAS NÃO CONFEREM, TENTE DIGITAR NOVAMENTE!'
           })
         } else {
-          this.$q.notify({
-            color: 'green-4',
-            textColor: 'white',
-            icon: 'cloud_done',
-            message: 'Enviado',
-            timeout: 10500
-          })
+          // this.$q.notify({
+          //   color: 'green-4',
+          //   textColor: 'white',
+          //   icon: 'cloud_done',
+          //   message: 'Enviado',
+          //   timeout: 10500
+          // })
           this.salvarUsuario()
         }
       }
@@ -247,13 +247,22 @@ export default {
       this.selecionarEstado()
       this.$axios.post('http://localhost:3000/usuariopcd', this.usuarioPcd).then(
         response => {
-          console.log(console.data)
+          console.log(response.data)
+          if (response.data.liberado) {
+            // EMITE MÉTODO 'closeModal' PARA COMPONENT PAI
+            this.$emit('closeModal')
+            window.location = '/'
+          } else {
+            this.$q.notify({
+              color: 'red-5',
+              textColor: 'white',
+              icon: 'alternate_email',
+              message: 'E-MAIL JÁ CADASTRADO!'
+            })
+          }
         }
       )
       console.log(this.usuarioPcd)
-      // IMPORTAR MÉTODO 'closeModal' DO COMPONENT PAI
-      this.$emit('closeModal')
-      window.location = '/'
     }
   }
 }
