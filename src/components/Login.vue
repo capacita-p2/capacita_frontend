@@ -5,7 +5,7 @@
     <div class="col-12 text-center">
       <h4 class="q-ma-lg txt-azul_escuro">ACESSO</h4>
     </div>
-    <div class="col-sm-8 col-md-8">
+    <div class="col-xs-11 col-sm-8 col-md-8">
       <q-input type="email" bottom-slots v-model="email" label="E-mail" lazy-rules>
         <template v-slot:prepend>
           <q-icon name="alternate_email" />
@@ -17,10 +17,11 @@
           <q-icon name="vpn_key" />
         </template>
       </q-input>
+      <p><a href="#" class="link-primario text-azul_escuro">Esqueceu a Senha?</a></p>
 
       <div class="flex justify-center q-gutter-sm q-pt-lg q-ma-sm">
         <q-btn class="btn-fixed-width" rounded color="primary" label="Entrar"  @click="login(email, senha)"/><br>
-        <q-btn class="btn-fixed-width" rounded color="primary" label="Inscreva-se no CAPACITA" @click="$router.replace('inscricaopcd')"/><br>
+        <q-btn class="btn-fixed-width" rounded color="primary" label="Inscreva-se" @click="$router.replace('inscricaopcd')"/><br>
         <q-btn class="btn-fixed-width" rounded color="primary" label="Solicitar Parceria" @click="$router.replace('inscricaoinst')"/>
       </div>
     </div>
@@ -145,6 +146,10 @@ export default {
 
 <style>
   .btn-fixed-width {
-    width: 300px
+    width: 200px
+  }
+
+  .link_recuperacao {
+    text-decoration: none;
   }
 </style>
