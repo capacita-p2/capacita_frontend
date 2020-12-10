@@ -74,22 +74,52 @@
       <!-- CARDS CIRCULARES -->
       <div style="min-width: 300px; max-width: 800px;">
         <div class="row justify-center col-12 col-12 q-pa-sm">
-          <div class="col-6 col-sm-4 col-md-2 q-pa-sm" align="center">
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+                align="center"
+                @mouseover="fisico = true"
+                @mouseleave="fisico = false"
+          >
+            <div class="absolute flex items-center justify-center card-selecao" v-show="fisico"><span>FÍSICO</span></div>
             <div class="card-circulares card-fisico"></div>
           </div>
-          <div class="col-6 col-sm-4 col-md-2 q-pa-sm" align="center">
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+                align="center"
+                @mouseover="visual = true"
+                @mouseleave="visual = false"
+          >
+            <div class="absolute flex items-center justify-center card-selecao" v-show="visual"><span>VISUAL</span></div>
             <div class="card-circulares card-visual"></div>
           </div>
-          <div class="col-6 col-sm-4 col-md-2 q-pa-sm" align="center">
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+                align="center"
+                @mouseover="mudez = true"
+                @mouseleave="mudez = false"
+          >
+            <div class="absolute flex items-center justify-center card-selecao" v-show="mudez"><span>MUDEZ</span></div>
             <div class="card-circulares card-mudez"></div>
           </div>
-          <div class="col-6 col-sm-4 col-md-2 q-pa-sm" align="center">
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+                align="center"
+                @mouseover="auditivo = true"
+                @mouseleave="auditivo = false"
+          >
+            <div class="absolute flex items-center justify-center card-selecao" v-show="auditivo"><span>AUDITIVO</span></div>
             <div class="card-circulares card-auditivo"></div>
           </div>
-          <div class="col-6 col-sm-4 col-md-2 q-pa-sm " align="center">
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+                align="center"
+                @mouseover="mental = true"
+                @mouseleave="mental = false"
+          >
+            <div class="absolute flex items-center justify-center card-selecao" v-show="mental"><span>MENTAL</span></div>
             <div class="card-circulares card-mental"></div>
           </div>
-          <div class="col-6 col-sm-4 col-md-2 q-pa-sm" align="center">
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+                align="center"
+                @mouseover="multiplos = true"
+                @mouseleave="multiplos = false"
+          >
+            <div class="absolute flex items-center justify-center card-selecao" v-show="multiplos"><span>MÚLTIPLOS</span></div>
             <div class="card-circulares card-multiplos"></div>
           </div>
         </div>
@@ -198,7 +228,13 @@ export default {
   data () {
     return {
       slide: 1,
-      autoplay: true
+      autoplay: true,
+      fisico: false,
+      visual: false,
+      mudez: false,
+      auditivo: false,
+      mental: false,
+      multiplos: false
     }
   }
 }
@@ -221,6 +257,16 @@ export default {
   width: 120px;
   height: 120px;
 }
+.card-selecao {
+  border-radius: 100%;
+  background-color: rgba(#0D3759, 0.8);
+  background-blend-mode: multiply;
+  color: #ffffff;
+  width: 120px;
+  height: 120px;
+  vertical-align: middle;
+  font-weight: 500;
+}
 .card-fisico {
   background-image: url("../imagens/cartao_fisico.png");
 }
@@ -239,6 +285,7 @@ export default {
 .card-multiplos {
   background-image: url("../imagens/cartao_multiplos.png");
 }
+
 //NOTICIAS
 div.noticia {
   width:300px;
@@ -258,6 +305,7 @@ div#img_noticia02 {
 div#img_noticia03 {
   background-image: url("../imagens/noticia_03.jpg")
 }
+
 //FOOTER
 div.footer {
   width: 100%;
