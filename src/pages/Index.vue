@@ -40,9 +40,11 @@
         <h4 class="col-12 q-py-sm q-ma-none text-center text-azul_escuro text-weight-bold" style="font-size: 2em;">
           CONFIRA OS CURSOS EM DESTAQUE
         </h4> <br>
+        <div class="textos">
         <p class="col-12 q-py-md text-center text-azul_escuro">
-          Nossa missão é trazer para você os melhores cursos profissionalizantes. Através de uma rede de instituições de ensino, sua Capacitação estará garantida para o mercado de trabalho.
+           Nossa missão é trazer para você os melhores cursos profissionalizantes. Através de uma rede de instituições de ensino, sua Capacitação estará garantida para o mercado de trabalho.
         </p>
+      </div>
       </div>
       <!-- BOTOES -->
       <div class="row justify-center col-12 col-12 q-pa-sm q-pb-lg text-azul_escuro" style="min-width: 250px; max-width: 400px;">
@@ -217,7 +219,7 @@
       </div>
       <!-- COPY RIGHT -->
       <hr style="width: 90%; opacity: 30%">
-      <p class="text-center q-mb-none q-pa-sm">CopyRight 2020</p>
+      <p class="text-center q-mb-none q-pa-sm">© Copyright 2020</p>
     </div>
   </q-page>
 </template>
@@ -248,8 +250,12 @@ export default {
   color: white
   background-color: rgba(0, 0, 0, .3)
 }
-
-//CSS CARTÕES DOS DEFICIENTES
+// TEXTOS
+.textos {
+  font-size: 18px;
+  text-align: center;
+}
+//CARTOES DOS TIPOS DE DEFICIENCIA
 .card-circulares {
   background-size: 90%;
   background-position: top;
@@ -314,6 +320,9 @@ div.footer {
 .footer p span {
   color: $azul_escuro;
   font-weight: 900;
+}
+.footer{
+font-size: 18px;
 }
 .footer a {
   text-decoration: none;
