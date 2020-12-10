@@ -9,7 +9,9 @@ const routes = [
       { path: 'inscricaopcd', component: () => import('pages/InscricaoPcd.vue') },
       { path: 'inscricaoinst', component: () => import('pages/InscricaoInst.vue') },
       { path: 'cursos', component: () => import('pages/Cursos.vue') },
-      { path: 'sobrenos', component: () => import('pages/SobreNos.vue') }
+      { path: 'sobrenos', component: () => import('pages/SobreNos.vue') },
+      { path: 'noticias', component: () => import('pages/Noticias.vue') },
+      { path: 'contato', component: () => import('pages/Contato.vue') }
     ]
   },
   // Always leave this as last one,

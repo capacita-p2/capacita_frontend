@@ -68,7 +68,7 @@
               </a>
           </div>
           <div class="row col-12 texto-menu link-primario">
-              <a href="/">
+              <a href="/noticias">
                 <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_noticias.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
                 <span class="col-6 q-ml-md">Notícias </span>
               </a>
@@ -86,7 +86,7 @@
               </a>
           </div>
           <div class="row col-12 texto-menu link-primario">
-              <a href="/">
+              <a href="/contato">
                 <img  class="col-6 q-ml-lg q-my-sm" src="../imagens/btn_contatos.svg" alt="Botão de Inicial" style="width: 2.4em; vertical-align: middle;">
                 <span class="col-6 q-ml-md">Contato </span>
               </a>
