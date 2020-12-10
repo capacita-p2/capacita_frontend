@@ -95,7 +95,7 @@
         </div>
       </div>
       <!-- NOTÍCIAS -->
-      <div class="row col-12 col-12 q-pa-sm">
+      <div class="row col-12 col-12 q-pa-sm" style="max-width: 1000px">
         <h3 class="col-12">Notícias</h3>
         <!-- NOTICIA01 -->
         <div class="col-4 col-md-4 col-xs-12 q-pb-xl">
