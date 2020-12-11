@@ -48,7 +48,7 @@
 
         <q-card-section class="row justify-center items-center q-pb-lg q-gutter-sm">
           <div v-for="curso in instituicao.Cursos" :key="curso.id">
-            <MiniCardCurso :curso='curso' />
+            <MiniCardCurso :curso='curso' :instituicao='instituicao' />
           </div>
         </q-card-section>
       </q-card>
@@ -69,12 +69,7 @@ export default {
     }
   },
   props: {
-    instituicao: {
-      nome_instituicao: String,
-      descricao: String,
-      url_img: String,
-      Cursos: Object
-    }
+    instituicao: Object
   },
   components: {
     MiniCardCurso
