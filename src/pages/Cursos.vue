@@ -5,6 +5,37 @@
       <h5 class="text-center text-weight-bold q-ma-none q-mb-lg text-azul_escuro">Cursos em Destaque</h5>
       <p class="text-center " style="font-size: 1.5em;">Nossa missão é trazer para você os melhores cursos profissionalizantes. Através de uma rede de instituições de ensino, sua Capacitação estará garantida para o mercado de trabalho. </p>
 
+      <!-- BARRA DE PESQUISAS -->
+      <div class="q-px-md" align="center">
+        <div class="row" style="max-width: 950px">
+          <q-select
+            outlined
+            v-model="model"
+            :options="options"
+            label="Filtro"
+            dense
+            round
+            class="q-pa-none col-xs-5 col-sm-2"
+          />
+          <q-input
+            outlined
+            bottom-slots
+            v-model="text"
+            label="Pesquisar"
+            maxlength="50"
+            round
+            :dense="dense"
+            class="q-pa-none col-xs-7 col-sm-10"
+          >
+            <template v-slot:append>
+              <q-icon v-if="text !== ''" name="close" @click="text = ''" class="cursor-pointer" />
+              <q-icon name="search" class="cursor-pointer" color="primary" />
+            </template>
+          </q-input>
+        </div>
+      </div>
+
+      <!-- ABAS -->
       <div class="q-pa-md flex justify-center">
         <div class="q-gutter-y-md" style="max-width: 950px;">
           <q-card>
@@ -55,6 +86,13 @@ export default {
   data () {
     return {
       tab: 'cursos',
+      text: '',
+      ph: '',
+      model: 'Cursos',
+      options: [
+        'Cursos', 'Instituições'
+      ],
+      dense: true,
       cursos: null,
       instituicoes: null
     }
