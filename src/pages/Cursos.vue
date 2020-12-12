@@ -20,7 +20,7 @@
           <q-input
             outlined
             bottom-slots
-            v-model="text"
+            v-model="pesquisa"
             label="Pesquisar"
             maxlength="50"
             round
@@ -28,8 +28,8 @@
             class="q-pa-none col-xs-7 col-sm-10"
           >
             <template v-slot:append>
-              <q-icon v-if="text !== ''" name="close" @click="text = ''" class="cursor-pointer" />
-              <q-icon name="search" class="cursor-pointer" color="primary" />
+              <q-icon v-if="pesquisa !== ''" name="close" @click="pesquisa = ''; listar()" class="cursor-pointer" />
+              <q-icon name="search" class="cursor-pointer" color="primary" @click='pesquisar()'/>
             </template>
           </q-input>
         </div>
@@ -44,8 +44,8 @@
               inline-label
               class="bg-primary text-white shadow-2"
             >
-              <q-tab name="cursos" icon="menu_book" label="Cursos" style="width: 100%"/>
-              <q-tab name="instituicoes" icon="apartment" label="Instituições"  style="width: 100%"/>
+              <q-tab name="cursos" icon="menu_book" label="Cursos" style="width: 100%" @click="model = 'Cursos'"/>
+              <q-tab name="instituicoes" icon="apartment" label="Instituições"  style="width: 100%" @click="model = 'Instituições'"/>
             </q-tabs>
 
             <q-separator />
@@ -76,17 +76,12 @@ import CardInst from 'components/CardInst'
 export default {
   name: 'PaginaCursos',
   mounted () {
-    this.$axios.get('http://localhost:3000/curso').then(response => {
-      this.cursos = response.data
-    })
-    this.$axios.get('http://localhost:3000/instituicao').then(response => {
-      this.instituicoes = response.data
-    })
+    this.listar()
   },
   data () {
     return {
       tab: 'cursos',
-      text: '',
+      pesquisa: null,
       ph: '',
       model: 'Cursos',
       options: [
@@ -101,6 +96,40 @@ export default {
     CardCurso,
     CardInst
   },
-  methods: {}
+  methods: {
+    listar () {
+      this.$axios.get('http://localhost:3000/curso').then(response => {
+        this.cursos = response.data
+      })
+      this.$axios.get('http://localhost:3000/instituicao').then(response => {
+        this.instituicoes = response.data
+      })
+    },
+    pesquisarCurso () {
+      var busca = {
+        pesquisa: this.pesquisa
+      }
+      this.$axios.post('http://localhost:3000/curso-pesquisa', busca).then(response => {
+        this.cursos = response.data
+      })
+    },
+    pesquisarInstituicao () {
+      var busca = {
+        pesquisa: this.pesquisa
+      }
+      this.$axios.post('http://localhost:3000/instituicao-pesquisa', busca).then(response => {
+        this.instituicoes = response.data
+      })
+    },
+    pesquisar () {
+      if (this.model === 'Cursos') {
+        this.pesquisarCurso()
+        this.tab = 'cursos'
+      } else {
+        this.pesquisarInstituicao()
+        this.tab = 'instituicoes'
+      }
+    }
+  }
 }
 </script>
