@@ -1,19 +1,19 @@
 <template>
   <q-page padding>
-    <div>
+    <div align="center">
       <div class="imagemsobrenos">
-      <img src="../imagens/banner_1.png">
-      <h4 class="text-center text-weight-bolder color-primary q-ma-lg text-azul_escuro">Sobre Nós</h4>
-      <h5 class="text-center text-weight-bold q-ma-none q-mb-lg text-azul_escuro">CAPACITA - Cursos Inclusivos</h5>
-      <div class="textosobrenos">
-      <p class="text-center" style="font-size: 1.5em;">Nossa missão é trazer para você os melhores cursos profissionalizantes. Através de uma rede de instituições de ensino, sua Capacitação estará garantida para o mercado de trabalho.
+        <img src="../imagens/banner_1.png">
+        <h4 class="text-center text-weight-bolder color-primary q-ma-lg text-azul_escuro">Sobre Nós</h4>
+        <h5 class="text-center text-weight-bold q-ma-none q-mb-lg text-azul_escuro">CAPACITA - Cursos Inclusivos</h5>
+        <div class="textosobrenos">
+        <p class="text-justify" style="font-size: 1.5em;">Nossa missão é trazer para você os melhores cursos profissionalizantes. Através de uma rede de instituições de ensino, sua Capacitação estará garantida para o mercado de trabalho.
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum efficitur augue quis laoreet. Quisque facilisis tellus non tempus consectetur. Integer aliquet lorem at augue malesuada feugiat. Fusce accumsan, velit sed semper condimentum, sem felis fringilla dolor, hendrerit posuere tellus odio eu diam. Donec molestie iaculis commodo. Maecenas elit diam, ullamcorper ut ligula vitae, commodo dictum metus. Suspendisse vitae maximus felis, finibus ullamcorper velit. Morbi blandit ex non ullamcorper bibendum. In tempus ligula in nunc cursus pellentesque vel nec leo. Mauris eu leo blandit, tempus magna eu, consequat ante. Fusce fringilla nibh in velit dictum, non maximus risus maximus. Integer a mattis purus. Quisque ipsum leo, finibus non turpis quis, aliquam tincidunt ex. Donec scelerisque varius elit, nec lacinia tellus volutpat nec. Etiam quis turpis malesuada velit lacinia luctus a sed ante. Suspendisse semper posuere risus, et scelerisque neque commodo sed.
-      Suspendisse in ante nec enim malesuada auctor ut in purus. Etiam in purus sed nibh tincidunt consectetur. Nam aliquet ac libero non vehicula. Vivamus porta, libero a dignissim gravida, mauris velit imperdiet libero, vitae accumsan orci arcu eget enim. Vestibulum est neque, volutpat sed lorem ut, pellentesque maximus tortor. Suspendisse vel leo sollicitudin, sagittis ex et, ultrices felis. Vestibulum semper erat in scelerisque malesuada. Morbi accumsan diam risus, quis eleifend mi interdum faucibus. Phasellus bibendum nisi ut eleifend cursus. Vivamus quis volutpat libero. Integer euismod et turpis vel suscipit. Nullam imperdiet imperdiet ex sed tempus. In porta pellentesque eros, eu blandit nibh pellentesque a.
-      </p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum efficitur augue quis laoreet. Quisque facilisis tellus non tempus consectetur. Integer aliquet lorem at augue malesuada feugiat. Fusce accumsan, velit sed semper condimentum, sem felis fringilla dolor, hendrerit posuere tellus odio eu diam. Donec molestie iaculis commodo. Maecenas elit diam, ullamcorper ut ligula vitae, commodo dictum metus. Suspendisse vitae maximus felis, finibus ullamcorper velit. Morbi blandit ex non ullamcorper bibendum. In tempus ligula in nunc cursus pellentesque vel nec leo. Mauris eu leo blandit, tempus magna eu, consequat ante. Fusce fringilla nibh in velit dictum, non maximus risus maximus. Integer a mattis purus. Quisque ipsum leo, finibus non turpis quis, aliquam tincidunt ex. Donec scelerisque varius elit, nec lacinia tellus volutpat nec. Etiam quis turpis malesuada velit lacinia luctus a sed ante. Suspendisse semper posuere risus, et scelerisque neque commodo sed.
+        Suspendisse in ante nec enim malesuada auctor ut in purus. Etiam in purus sed nibh tincidunt consectetur. Nam aliquet ac libero non vehicula. Vivamus porta, libero a dignissim gravida, mauris velit imperdiet libero, vitae accumsan orci arcu eget enim. Vestibulum est neque, volutpat sed lorem ut, pellentesque maximus tortor. Suspendisse vel leo sollicitudin, sagittis ex et, ultrices felis. Vestibulum semper erat in scelerisque malesuada. Morbi accumsan diam risus, quis eleifend mi interdum faucibus. Phasellus bibendum nisi ut eleifend cursus. Vivamus quis volutpat libero. Integer euismod et turpis vel suscipit. Nullam imperdiet imperdiet ex sed tempus. In porta pellentesque eros, eu blandit nibh pellentesque a.
+        </p>
+        </div>
       </div>
-      </div>
-    </div>
+
       <!-- BOTOES -->
       <div class="row justify-center col-12 col-12 q-pa-sm q-pb-lg text-azul_escuro" style="min-width: 250px; max-width: 400px;">
         <div class="col-3" align="center">
@@ -94,56 +94,58 @@
           </div>
         </div>
       </div>
-<!-- FOOTER -->
-    <div class="footer">
-      <div class="q-pa-md q-px-xl row justify-center">
-        <!-- LOGO -->
-        <div class="col-xs-12 col-sm flex justify-center">
-          <div class="q-pb-xl" style="width: 120px; font-size: 1.5em;">
-            <q-icon name="filter_none" style="font-size: 1.8em;"/> logo
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <div class="q-pa-md q-px-xl row justify-center">
+          <!-- LOGO -->
+          <div class="col-xs-12 col-sm flex justify-center">
+            <div class="q-pb-xl" style="width: 120px; font-size: 1.5em;">
+              <q-icon name="filter_none" style="font-size: 1.8em;"/> logo
+            </div>
           </div>
-        </div>
-        <!-- MOBILE APP -->
-        <div class="col-xs-12 col-sm-2 flex justify-center">
-          <div style="width: 120px;">
-            <p><span>Mobile app</span><br><br>
-            <a href="#">Features</a><br>
-            <a href="#">Live share</a><br>
-            <a href="#">Video record</a></p>
+          <!-- MOBILE APP -->
+          <div class="col-xs-12 col-sm-2 flex justify-center">
+            <div style="width: 120px;">
+              <p><span>Mobile app</span><br><br>
+              <a href="#">Features</a><br>
+              <a href="#">Live share</a><br>
+              <a href="#">Video record</a></p>
+            </div>
           </div>
-        </div>
-        <!-- COMMUNITY -->
-        <div class="col-xs-12 col-sm-2 flex justify-center">
-          <div style="width: 120px;">
-             <p>
-              <span>Community</span><br><br>
-              <a href="#">Featured artists</a><br>
-              <a href="#">The Portal</a><br>
-              <a href="#">Live events</a>
-          </p>
-          </div>
-        </div>
-        <!-- COMPANY -->
-        <div class="col-xs-12 col-sm-2 flex justify-center">
-          <div  style="width: 120px;">
-            <p>
-              <span>Company</span> <br><br>
-              <a href="#">Contacts us</a> <br>
-              <a href="#">History</a>
+          <!-- COMMUNITY -->
+          <div class="col-xs-12 col-sm-2 flex justify-center">
+            <div style="width: 120px;">
+              <p>
+                <span>Community</span><br><br>
+                <a href="#">Featured artists</a><br>
+                <a href="#">The Portal</a><br>
+                <a href="#">Live events</a>
             </p>
+            </div>
+          </div>
+          <!-- COMPANY -->
+          <div class="col-xs-12 col-sm-2 flex justify-center">
+            <div  style="width: 120px;">
+              <p>
+                <span>Company</span> <br><br>
+                <a href="#">Contacts us</a> <br>
+                <a href="#">History</a>
+              </p>
+            </div>
+          </div>
+          <!-- BOTÕES -->
+          <div class="col-xs-12 col-sm-2 flex justify-center">
+            <div style="width: 120px;" class="q-gutter-y-sm">
+              <q-btn color="orange" label="Registrar" style="width: 100px;"/>
+              <q-btn color="white" text-color="orange" label="Entrar"  style="width: 100px"/>
+            </div>
           </div>
         </div>
-        <!-- BOTÕES -->
-        <div class="col-xs-12 col-sm-2 flex justify-center">
-          <div style="width: 120px;" class="q-gutter-y-sm">
-            <q-btn color="orange" label="Registrar" style="width: 100px;"/>
-            <q-btn color="white" text-color="orange" label="Entrar"  style="width: 100px"/>
-          </div>
-        </div>
+        <!-- COPY RIGHT -->
+        <hr style="width: 90%; opacity: 30%">
+        <p class="text-center q-mb-none q-pa-sm">© Copyright 2020</p>
       </div>
-      <!-- COPY RIGHT -->
-      <hr style="width: 90%; opacity: 30%">
-      <p class="text-center q-mb-none q-pa-sm">© Copyright 2020</p>
     </div>
   </q-page>
 </template>
