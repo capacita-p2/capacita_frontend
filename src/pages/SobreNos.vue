@@ -1,8 +1,8 @@
 <template>
-  <q-page padding>
+  <q-page>
     <div align="center">
       <div class="imagemsobrenos">
-        <img src="../imagens/banner_1.png">
+        <q-img src="../imagens/banner_1.png" class="img_principal"/>
         <h4 class="text-center text-weight-bolder color-primary q-ma-lg text-azul_escuro">Sobre Nós</h4>
         <h5 class="text-center text-weight-bold q-ma-none q-mb-lg text-azul_escuro">CAPACITA - Cursos Inclusivos</h5>
         <div class="textosobrenos">
@@ -44,7 +44,7 @@
       <!-- CARDS CIRCULARES -->
       <div style="min-width: 300px; max-width: 800px;">
         <div class="row justify-center col-12 col-12 q-pa-sm">
-          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center justify-center"
                 align="center"
                 @mouseover="fisico = true"
                 @mouseleave="fisico = false"
@@ -52,7 +52,7 @@
             <div class="absolute flex items-center justify-center card-selecao" v-show="fisico"><span>FÍSICO</span></div>
             <div class="card-circulares card-fisico"></div>
           </div>
-          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center justify-center"
                 align="center"
                 @mouseover="visual = true"
                 @mouseleave="visual = false"
@@ -60,7 +60,7 @@
             <div class="absolute flex items-center justify-center card-selecao" v-show="visual"><span>VISUAL</span></div>
             <div class="card-circulares card-visual"></div>
           </div>
-          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center justify-center"
                 align="center"
                 @mouseover="mudez = true"
                 @mouseleave="mudez = false"
@@ -68,7 +68,7 @@
             <div class="absolute flex items-center justify-center card-selecao" v-show="mudez"><span>MUDEZ</span></div>
             <div class="card-circulares card-mudez"></div>
           </div>
-          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center justify-center"
                 align="center"
                 @mouseover="auditivo = true"
                 @mouseleave="auditivo = false"
@@ -76,7 +76,7 @@
             <div class="absolute flex items-center justify-center card-selecao" v-show="auditivo"><span>AUDITIVO</span></div>
             <div class="card-circulares card-auditivo"></div>
           </div>
-          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center justify-center"
                 align="center"
                 @mouseover="mental = true"
                 @mouseleave="mental = false"
@@ -84,7 +84,7 @@
             <div class="absolute flex items-center justify-center card-selecao" v-show="mental"><span>MENTAL</span></div>
             <div class="card-circulares card-mental"></div>
           </div>
-          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center"
+          <div  class="col-6 col-sm-4 col-md-2 q-pa-sm relative-position flex items-center justify-center"
                 align="center"
                 @mouseover="multiplos = true"
                 @mouseleave="multiplos = false"
@@ -167,12 +167,16 @@ export default {
 </script>
 
 <style lang="stylus">
+.img_principal {
+  max-width: 1000px;
+}
+
 //IMAGEM E TEXTO SOBRE NOS
 .imagemsobrenos{
-  padding: 0px 60px 0px 0px
+  padding: 20px 20px 0px 20px
 }
 .textosobrenos{
-  width: 1400px;
+  max-width: 1000px;
   text-align: justify;
 }
 //CSS CARTOES DOS TIPOS DE DEFICIENCIA
