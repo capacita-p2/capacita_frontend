@@ -26,6 +26,8 @@
             round
             :dense="dense"
             class="q-pa-none col-xs-7 col-sm-10"
+            @keyup.enter="pesquisar()"
+            @keyup.esc="listar(); pesquisa = ''"
           >
             <template v-slot:append>
               <q-icon v-if="pesquisa !== ''" name="close" @click="pesquisa = ''; listar()" class="cursor-pointer" />
@@ -81,7 +83,7 @@ export default {
   data () {
     return {
       tab: 'cursos',
-      pesquisa: null,
+      pesquisa: '',
       ph: '',
       model: 'Cursos',
       options: [
