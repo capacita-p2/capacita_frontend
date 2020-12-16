@@ -2,7 +2,7 @@
   <q-page>
     <div align="center">
       <div class="imagemsobrenos">
-        <q-img src="../imagens/banner_1.png" class="img_principal"/>
+        <q-img src="../imagens/Logo_capacita.png" class="img_principal"/>
         <h4 class="text-center text-weight-bolder color-primary q-ma-lg text-azul_escuro">Sobre Nós</h4>
         <h5 class="text-center text-weight-bold q-ma-none q-mb-lg text-azul_escuro">CAPACITA - Cursos Inclusivos</h5>
         <div class="textosobrenos">
@@ -94,7 +94,6 @@
           </div>
         </div>
       </div>
-
       <!-- FOOTER -->
       <div class="footer">
         <div class="q-pa-md q-px-xl row justify-center">
@@ -168,9 +167,8 @@ export default {
 
 <style lang="stylus">
 .img_principal {
-  max-width: 1000px;
+  max-width: 400px;
 }
-
 //IMAGEM E TEXTO SOBRE NOS
 .imagemsobrenos{
   padding: 20px 20px 0px 20px
