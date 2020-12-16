@@ -6,7 +6,8 @@
         <q-toolbar-title align="center">
           <div  class="row items-center">
             <div class="col">
-              <p style="margin: 0; line-height: 1em;"><span class="text-weight-bold" style="letter-spacing: 0.4em;">CAPACITA</span><br><span style="font-size: 0.8em;">Cursos Inclusivos </span></p>
+              <!-- <p style="margin: 0; line-height: 1em;"><span class="text-weight-bold" style="letter-spacing: 0.4em;">CAPACITA</span><br><span style="font-size: 0.8em;">Cursos Inclusivos </span></p> -->
+              <q-img src="../imagens/lg_capacita.svg" style="width: 170px" />
             </div>
           </div>
         </q-toolbar-title>
