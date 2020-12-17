@@ -34,16 +34,6 @@ FrontEnd do Projeto CAPACITA em desenvolvimento pela Equipe 27 GrowTech.
 Alunos da FICR - Faculdade Católica Imaculada Conceição do Recife. 2020
 <br/>
 
-
-### :family_man_man_boy_boy: Contribute
-
-<p>To contribute, <a href="CONTRIBUTING.md">follow these instructions</a>.</p>
-<br/>
-
-### :memo: License
-
-<p>This project is under the MIT license. See the file <a href="LICENSE.md">LICENSE</a> for more details.</p>
-
 ###  Contributors
 
   <a href="https://github.com/josemilsonjunior">
