@@ -25,7 +25,7 @@
           <!-- ICONE E BOTÃO DE ACESSO -->
           <div>
             <div class="float-right" style="height: 62px; padding: 6px 10px 0px 0;"><q-icon name="home" style="font-size: 3.5em;"/></div>
-            <div class="float-right gt-xs" style="height: 62px; padding: 17px 15px 0 0;"><q-btn style="font-size: 0.8em;" rounded color="orange" label="Acesso" @click="icon = true"/></div>
+            <div class="float-right gt-xs" style="height: 62px; padding: 17px 15px 0 0;"><q-btn style="font-size: 1em;" rounded color="orange" label="Acesso" @click="icon = true"/></div>
           </div>
         </div>
       </q-toolbar>
@@ -41,7 +41,7 @@
       <q-list>
         <div>
           <q-item>
-            <q-item-label header class="text-grey-8 text-weight-bold" size="2em" style="font-size: 2em;">
+            <q-item-label header class="text-orange-8 text-weight-bold" size="2em" style="font-size: 2em;">
               MENU
             </q-item-label>
             <q-item-section>

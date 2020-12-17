@@ -260,6 +260,9 @@ export default {
   background-size: 90%;
   background-position: top;
   border-radius: 100%;
+  box-shadow: 0px 0px 0.8em #B0B0B0;
+  webkit-box-shadow: 0px 0px 0em #B0B0B0;
+  moz-box-shadow: 0px 0px 0em #B0B0B0;
   width: 120px;
   height: 120px;
 }
