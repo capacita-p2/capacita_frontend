@@ -14,7 +14,7 @@
         @mouseenter="autoplay = false"
         @mouseleave="autoplay = true"
       >
-        <q-carousel-slide :name="1" img-src="../imagens/banner_1.png">
+        <q-carousel-slide :name="1" img-src="../imagens/banner_01.png">
           <div class="absolute-bottom custom-caption">
             <div class="text-h4 text-weight-bold">INFORMÁTICA</div>
             <div class="text-subtitle1">Cursos básico com os principais módulos</div>
@@ -134,8 +134,8 @@
           <div class="noticia">
             <div id="img_noticia01" class="img_noticia"></div>
             <div class="noticia01">
-              <h5 class="q-ma-md">Lorem ipsum dolor sit amet, consectetur adip iscing elit. </h5>
-              <p class="text-justify q-pa-sm q-mb-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum pharetra tellus, non venenatis metus porta id. Nunc vestibulum fringilla mattis. Nunc mi lorem, varius nec porta fringilla, pretium ut nibh. Nulla ultricies laoreet felis, non porta turpis. Fusce maximus elementum ligula, eget lacinia ex rhoncus ut. Proin id massa purus. In tristique ultrices magna, eget accumsan tortor congue id. Donec iaculis enim nunc, at ultricies urna porta id. Nunc fringilla nibh nec leo efficitur cursus. Ut id tellus vitae risus lacinia tincidunt. Maecenas ut dolor consectetur tortor iaculis egestas. Aenean eu tristique arcu.</p>
+              <h5 class="q-ma-md" style="font-size: 22px; font-weight:600;">Como e onde solicitar o cartão de estacionamento.</h5>
+              <p class="text-justify q-pa-sm q-mb-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum pharetra tellus, non venenatis metus porta id. Nunc vestibulum fringilla mattis. Nunc mi lorem, varius nec porta fringilla, pretium ut nibh. Nulla ultricies laoreet felis, non porta turpis. Fusce maximus elementum ligula, eget lacinia ex rhoncus ut.</p>
               <div class="text-right">
                 <q-btn outline rounded color="orange" label="Ver mais"/>
               </div>
@@ -147,8 +147,8 @@
           <div class="noticia">
             <div id="img_noticia02" class="img_noticia"></div>
             <div class="noticia02">
-              <h5 class="q-ma-md">Lorem ipsum dolor sit amet, consectetur adip iscing elit. </h5>
-              <p class="text-justify q-pa-sm q-mb-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum pharetra tellus, non venenatis metus porta id. Nunc vestibulum fringilla mattis. Nunc mi lorem, varius nec porta fringilla, pretium ut nibh. Nulla ultricies laoreet felis, non porta turpis. Fusce maximus elementum ligula, eget lacinia ex rhoncus ut. Proin id massa purus. In tristique ultrices magna, eget accumsan tortor congue id. Donec iaculis enim nunc, at ultricies urna porta id. Nunc fringilla nibh nec leo efficitur cursus. Ut id tellus vitae risus lacinia tincidunt. Maecenas ut dolor consectetur tortor iaculis egestas. Aenean eu tristique arcu.</p>
+              <h5 class="q-ma-md" style="font-weight:600;">Novos cursos e vagas para 2021.</h5>
+              <p class="text-justify q-pa-sm q-mb-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum pharetra tellus, non venenatis metus porta id. Nunc vestibulum fringilla mattis. Nunc mi lorem, varius nec porta fringilla, pretium ut nibh. Nulla ultricies laoreet felis, non porta turpis. Fusce maximus elementum ligula, eget lacinia ex rhoncus ut.</p>
               <div class="text-right">
                 <q-btn outline rounded color="orange" label="Ver mais"/>
               </div>
@@ -160,8 +160,8 @@
           <div class="noticia">
             <div id="img_noticia03" class="img_noticia"></div>
             <div class="noticia03">
-              <h5 class="q-ma-md">Lorem ipsum dolor sit amet, consectetur adip iscing elit. </h5>
-              <p class="text-justify q-pa-sm q-mb-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum pharetra tellus, non venenatis metus porta id. Nunc vestibulum fringilla mattis. Nunc mi lorem, varius nec porta fringilla, pretium ut nibh. Nulla ultricies laoreet felis, non porta turpis. Fusce maximus elementum ligula, eget lacinia ex rhoncus ut. Proin id massa purus. In tristique ultrices magna, eget accumsan tortor congue id. Donec iaculis enim nunc, at ultricies urna porta id. Nunc fringilla nibh nec leo efficitur cursus. Ut id tellus vitae risus lacinia tincidunt. Maecenas ut dolor consectetur tortor iaculis egestas. Aenean eu tristique arcu.</p>
+              <h5 class="q-ma-md" style="font-weight:600;">Como estará o mercado de trabalho em 2021? </h5>
+              <p class="text-justify q-pa-sm q-mb-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum pharetra tellus, non venenatis metus porta id. Nunc vestibulum fringilla mattis. Nunc mi lorem, varius nec porta fringilla, pretium ut nibh. Nulla ultricies laoreet felis, non porta turpis. Fusce maximus elementum ligula, eget lacinia ex rhoncus ut.</p>
               <div class="text-right">
                 <q-btn outline rounded color="orange" label="Ver mais"/>
               </div>
@@ -174,38 +174,38 @@
     <div class="footer">
       <div class="q-pa-md q-px-xl row justify-center">
         <!-- LOGO -->
-        <div class="col-xs-12 col-sm flex justify-center">
-          <div class="q-pb-xl" style="width: 120px; font-size: 1.5em;">
-            <q-icon name="filter_none" style="font-size: 1.8em;"/> logo
+      <div class="logorodape" >
+        <div class="col-xs-12 col-sm-2 flex justify-center ">
+          <div class="q-pb-xl" style="width: 300px;">
+            <q-img src="../imagens/logo_capacita_branca.png"/>
           </div>
         </div>
-        <!-- MOBILE APP -->
+      </div>
+        <!-- Coluna 1 -->
         <div class="col-xs-12 col-sm-2 flex justify-center">
-          <div style="width: 120px;">
-            <p><span>Mobile app</span><br><br>
-            <a href="#">Features</a><br>
-            <a href="#">Live share</a><br>
-            <a href="#">Video record</a></p>
+          <div style="width: 100px;">
+            <p><span>CAPACITA</span><br><br>
+            <a href="#">Sobre Nós</a><br>
+            <a href="#">Notícias</a><br>
+            <a href="#">Contato</a></p>
           </div>
         </div>
-        <!-- COMMUNITY -->
+        <!-- Coluna 2 -->
         <div class="col-xs-12 col-sm-2 flex justify-center">
-          <div style="width: 120px;">
-             <p>
-              <span>Community</span><br><br>
-              <a href="#">Featured artists</a><br>
-              <a href="#">The Portal</a><br>
-              <a href="#">Live events</a>
-          </p>
+          <div style="width: 100px;">
+             <p><span>ENSINO</span><br><br>
+              <a href="#">Cursos</a><br>
+              <a href="#">Instituições</a><br>
+              <a href="#">Fórum</a><br></p>
           </div>
         </div>
-        <!-- COMPANY -->
+        <!-- Coluna 3 -->
         <div class="col-xs-12 col-sm-2 flex justify-center">
-          <div  style="width: 120px;">
+          <div  style="width: 100px;">
             <p>
-              <span>Company</span> <br><br>
-              <a href="#">Contacts us</a> <br>
-              <a href="#">History</a>
+              <span>ACESSO</span> <br><br>
+              <a href="#">Cadastro</a> <br>
+              <a href="#">Login</a>
             </p>
           </div>
         </div>
@@ -294,6 +294,8 @@ export default {
 
 //NOTICIAS
 div.noticia {
+  font-size: 18px;
+  text-align: left;
   width:300px;
   height:750px;
 }
@@ -314,21 +316,23 @@ div#img_noticia03 {
 
 //FOOTER
 div.footer {
+  padding-top: 2%;
   width: 100%;
   background-color: $primary;
 }
 .footer p span {
-  color: $azul_escuro;
-  font-weight: 900;
+  color: orange;
+  font-weight:600;
 }
 .footer{
-font-size: 18px;
+font-size: 20px;
 }
 .footer a {
   text-decoration: none;
   color: #ffffff;
 }
 .footer a:hover {
-  font-weight: 900;
+  color: $azul_escuro;
+  font-weight: 800;
 }
 </style>

@@ -69,44 +69,44 @@
         </div>
       </div>
       <!-- FOOTER -->
-      <div class="footer">
-        <div class="q-pa-md q-px-xl row justify-center">
-          <!-- LOGO -->
-          <div class="col-xs-12 col-sm flex justify-center">
-            <div class="q-pb-xl" style="width: 120px; font-size: 1.5em;">
-              <q-icon name="filter_none" style="font-size: 1.8em;"/> logo
-            </div>
+    <div class="footer">
+      <div class="q-pa-md q-px-xl row justify-center">
+        <!-- LOGO -->
+      <div class="logorodape" >
+        <div class="col-xs-12 col-sm-2 flex justify-center ">
+          <div class="q-pb-xl" style="width: 300px;">
+            <q-img src="../imagens/logo_capacita_branca.png"/>
           </div>
-          <!-- MOBILE APP -->
-          <div class="col-xs-12 col-sm-2 flex justify-center">
-            <div style="width: 120px;">
-              <p><span>Mobile app</span><br><br>
-              <a href="#">Features</a><br>
-              <a href="#">Live share</a><br>
-              <a href="#">Video record</a></p>
-            </div>
+        </div>
+      </div>
+        <!-- Coluna 1 -->
+        <div class="col-xs-12 col-sm-2 flex justify-center">
+          <div style="width: 100px;">
+            <p><span>CAPACITA</span><br><br>
+            <a href="#">Sobre Nós</a><br>
+            <a href="#">Notícias</a><br>
+            <a href="#">Contato</a></p>
           </div>
-          <!-- COMMUNITY -->
-          <div class="col-xs-12 col-sm-2 flex justify-center">
-            <div style="width: 120px;">
-              <p>
-                <span>Community</span><br><br>
-                <a href="#">Featured artists</a><br>
-                <a href="#">The Portal</a><br>
-                <a href="#">Live events</a>
+        </div>
+        <!-- Coluna 2 -->
+        <div class="col-xs-12 col-sm-2 flex justify-center">
+          <div style="width: 100px;">
+             <p><span>ENSINO</span><br><br>
+              <a href="#">Cursos</a><br>
+              <a href="#">Instituições</a><br>
+              <a href="#">Fórum</a><br></p>
+          </div>
+        </div>
+        <!-- Coluna 3 -->
+        <div class="col-xs-12 col-sm-2 flex justify-center">
+          <div  style="width: 100px;">
+            <p>
+              <span>ACESSO</span> <br><br>
+              <a href="#">Cadastro</a> <br>
+              <a href="#">Login</a>
             </p>
-            </div>
           </div>
-          <!-- COMPANY -->
-          <div class="col-xs-12 col-sm-2 flex justify-center">
-            <div  style="width: 120px;">
-              <p>
-                <span>Company</span> <br><br>
-                <a href="#">Contacts us</a> <br>
-                <a href="#">History</a>
-              </p>
-            </div>
-          </div>
+        </div>
           <!-- BOTÕES -->
           <div class="col-xs-12 col-sm-2 flex justify-center">
             <div style="width: 120px;" class="q-gutter-y-sm">
@@ -188,23 +188,25 @@ export default {
 </script>
 
 <style lang="stylus">
+//FOOTER
 div.footer {
+  padding-top: 2%;
   width: 100%;
   background-color: $primary;
 }
 .footer p span {
-  color: $azul_escuro;
-  font-weight: 900;
+  color: orange;
+  font-weight:600;
 }
 .footer{
-font-size: 18px;
+font-size: 20px;
 }
 .footer a {
-  font: size 20px;
   text-decoration: none;
   color: #ffffff;
 }
 .footer a:hover {
-  font-weight: 900;
+  color: $azul_escuro;
+  font-weight: 800;
 }
 </style>
