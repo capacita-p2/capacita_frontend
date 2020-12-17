@@ -10,12 +10,12 @@
 Nossa missão é trazer para você os melhores cursos profissionalizantes. Através de uma rede de instituições de ensino, sua Capacitação estará garantida para o mercado de trabalho.
 </p>
 
-### :floppy_disk: Technology
+### :floppy_disk: Tecnologia
 
-This project was developed with the following technologies:
+Para o desenvolvimento da solução foram utilizados as seguintes tecnologias:
 
 <ul>
-  <li><a href="/">Figma</a></li> Prototipação)
+  <li><a href="/">Figma</a></li>
   <li><a href="https://nodejs.org/en/">NodeJS</a></li>
   <li><a href="www.microsoft.com/sqlserver/">MSSql Server</a></li>
   <li><a href="https://sequelize.org/">Sequelize (ORM)</a></li>
@@ -26,7 +26,7 @@ This project was developed with the following technologies:
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML5</a></li>
  
   
-### :computer: Project
+### :computer: Projeto
 
 #### Problema:
 <p align="justify" style="color: #333">
@@ -38,7 +38,7 @@ Identificamos que existem plataformas que facilitam a divulgação de vagas de e
 Nossa proposta é desenvolver um sistema para divulgação de cursos de qualificação profissional para deficientes físicos, de modo que eles possam ingressar no mercado de trabalho com alguma qualificação.
 <br/>
 
-###  Contributors
+###  Contribuidores
 
 Front-end, back-end do Projeto CAPACITA em desenvolvimento pela Equipe 27 GrowTech. 
 Alunos da FICR - Faculdade Católica Imaculada Conceição do Recife. 2020
