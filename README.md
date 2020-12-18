@@ -19,15 +19,26 @@ Para o desenvolvimento da solução foram utilizados as seguintes tecnologias:
   <li><a href="https://nodejs.org/en/">NodeJS</a></li>
   <li><a href="www.microsoft.com/sqlserver/">MSSql Server</a></li>
   <li><a href="https://sequelize.org/">Sequelize (ORM)</a></li>
+<<<<<<< HEAD
   <li><a href="https://quasar.dev/">Quasar/VueJS</a></li>
+=======
+  <li><a href="https://quasar.dev/">Quasar/VueJS</a></li> 
+>>>>>>> 969696bd83145c36a28ec26db4cbfcfa681bd47d
   <li><a href="https://vuejs.org/">Vue.Js</a></li>
   <li><a href="https://sass-lang.com/">JavaScript</a></li>
   <li><a href="https://facebook.github.io/jsx/">CSS3</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML5</a></li>
+<<<<<<< HEAD
 
 
 ### :computer: Projeto
 
+=======
+ 
+  
+### :computer: Projeto
+
+>>>>>>> 969696bd83145c36a28ec26db4cbfcfa681bd47d
 #### Problema:
 <p align="justify" style="color: #333">
 De acordo com o Censo 2010, 24% da população brasileira declarou algum grau de deficiência. Entretanto, apenas 1% dos portadores de deficiência estão incluídos no mercado formal de trabalho. Pesquisas indicam que um dos fatores para esta baixa inclusão está relacionada a baixa escolaridade e a baixa qualificação profissional.
@@ -40,7 +51,11 @@ Nossa proposta é desenvolver um sistema para divulgação de cursos de qualific
 
 ###  Contribuidores
 
+<<<<<<< HEAD
 Front-end, back-end do Projeto CAPACITA em desenvolvimento pela Equipe 27 GrowTech.
+=======
+Front-end, back-end do Projeto CAPACITA em desenvolvimento pela Equipe 27 GrowTech. 
+>>>>>>> 969696bd83145c36a28ec26db4cbfcfa681bd47d
 Alunos da FICR - Faculdade Católica Imaculada Conceição do Recife. 2020
 
   <table>
