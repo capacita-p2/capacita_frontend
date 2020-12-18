@@ -2,7 +2,7 @@
   <q-page>
     <div align="center">
       <div class="imagemsobrenos">
-        <q-img src="../imagens/Logo_capacita.png" class="img_principal"/>
+        <q-img src="../imagens/logo_capacita.png" class="img_principal"/>
         <h4 class="text-center text-weight-bolder color-primary q-ma-lg text-azul_escuro">SOBRE NÓS</h4>
         <div class="textosobrenos">
         <p class="text-justify" style="font-size: 1.5em;">Nossa missão é trazer para você os melhores cursos profissionalizantes. Através de uma rede de instituições de ensino, sua Capacitação estará garantida para o mercado de trabalho.
