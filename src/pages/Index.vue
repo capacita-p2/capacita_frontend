@@ -254,6 +254,7 @@ export default {
 .textos {
   font-size: 18px;
   text-align: center;
+  width: 100%;
 }
 //CARTOES DOS TIPOS DE DEFICIENCIA
 .card-circulares {
