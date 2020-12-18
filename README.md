@@ -43,17 +43,21 @@ Nossa proposta é desenvolver um sistema para divulgação de cursos de qualific
 Front-end, back-end do Projeto CAPACITA em desenvolvimento pela Equipe 27 GrowTech. 
 Alunos da FICR - Faculdade Católica Imaculada Conceição do Recife. 2020
 
-  <a href="https://github.com/josemilsonjunior">
-        <img style="border-radius: 50px;" src="https://avatars0.githubusercontent.com/u/63685419?s=460&v=4" width="70px;" alt="Josemilson Francisco"/>
+  <table>
+  <tr>
+      <td align="center" style="border: none;">
+      <a href="https://github.com/josemilsonjunior">
+        <img style="border-radius: 50px;" src="https://avatars0.githubusercontent.com/u/63685419?s=460&v=4" width="70px;" alt="Josemilson Junior"/>
         <br />
         <sub>
-          <b>Josemilson Francisco</b>
+          <b>Josemilson Junior</b>
         </sub>
       </a>
       <br />
-      <p><scan title="Code">💻</scan>|<scan title="Documentation">🎨</scan></p>
-    </td> <td align="center" style="border: none;">
-    <a href="https://github.com/Marianasn4">
+      <p><scan title="Code">💻</scan>|<scan title="Documentation">📖</scan>|<scan title="Bugs">🐛</scan></p>
+    </td>
+    <td align="center" style="border: none;">
+      <a href="https://github.com/Marianasn4">
         <img style="border-radius: 50px;" src="https://avatars2.githubusercontent.com/u/49256775?s=400&u=39a91359a22842a90574a9913ba06b28a6ef6ed6&v=4" width="70px;" alt="Mariana Nascimento"/>
         <br />
         <sub>
@@ -61,9 +65,10 @@ Alunos da FICR - Faculdade Católica Imaculada Conceição do Recife. 2020
         </sub>
       </a>
       <br />
-      <p><scan title="Code">💻</scan>|<scan title="Documentation">🎨</scan></p>
-    </td> <td align="center" style="border: none;">
-    <a href="https://github.com/chrystyanallyson">
+      <p><scan title="Code">💻</scan>|<scan title="Documentation">📖</scan>|<scan title="Documentation">🎨</scan></p>
+    </td>
+     <td align="center" style="border: none;">
+      <a href="https://github.com/chrystyanallyson">
         <img style="border-radius: 50px;" src="https://avatars3.githubusercontent.com/u/56077910?s=460&u=36aadb491ad0f5dacf5dbc95d5c9e964ef72662a&v=4" width="70px;" alt="Chrystyan Allyson"/>
         <br />
         <sub>
@@ -71,9 +76,11 @@ Alunos da FICR - Faculdade Católica Imaculada Conceição do Recife. 2020
         </sub>
       </a>
       <br />
-      <p><scan title="Code">💻</scan>|<scan title="Documentation">🎨</scan></p>
+      <p><scan title="Code">💻</scan></p>
     </td>
     <td align="center" style="border: none;">
+    </tr>
+</table>
 
 # Capacita Cursos Inclusivos (capacita)
 
