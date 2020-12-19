@@ -12,7 +12,7 @@
         </template>
       </q-input>
 
-      <q-input type="password" bottom-slots v-model="senha" label="Senha">
+      <q-input type="password" bottom-slots v-model="senha" label="Senha" @keyup.enter="login(email, senha)" >
         <template v-slot:prepend>
           <q-icon name="vpn_key" />
         </template>
